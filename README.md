@@ -57,6 +57,8 @@ profile and see the restaurants in a saved list.
 * DetailedRestaurantView
     * View that contains more information than the basic profile, such as
     recent reviews, location, business hours, phone number, etc.
+* AccountCreationView
+    * View to make a unique account, presented for first-time users.
 
 ### Controller
 * MainRestaurantViewController
@@ -76,4 +78,6 @@ profile and see the restaurants in a saved list.
 * DetailedRestaurantViewController
     * Grabs more detailed information from the model and displays it in
     a DetailedRestaurantView.
+* AccountCreationViewController
+    * Take the information that the user inputs and creates a user profile.
 
