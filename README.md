@@ -67,7 +67,7 @@ their profile and see the restaurants in a saved list.
     the user to the detailed restaurant view
 * SettingsViewController
     * Settings for user to toggle options, such as to give a location,
-    filter based on price, sort them, etc.
+    sort them, etc.
 * BasicRestaurantViewController
     * Grabs the data for a restaurant from the model and displays it in
     the BasicRestaurantView. Handles the tap gesture that takes the user
