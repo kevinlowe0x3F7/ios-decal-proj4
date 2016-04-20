@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */; };
-		2B14E8DD1CC715D6006EF784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DC1CC715D6006EF784 /* ViewController.swift */; };
+		2B14E8DD1CC715D6006EF784 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DC1CC715D6006EF784 /* MainViewController.swift */; };
 		2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8DE1CC715D6006EF784 /* Main.storyboard */; };
 		2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8E11CC715D6006EF784 /* LocalEats.xcdatamodeld */; };
 		2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8E41CC715D6006EF784 /* Assets.xcassets */; };
 		2B14E8E81CC715D6006EF784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8E61CC715D6006EF784 /* LaunchScreen.storyboard */; };
 		2B14E8F31CC715D6006EF784 /* LocalEatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8F21CC715D6006EF784 /* LocalEatsTests.swift */; };
 		2B14E8FE1CC715D6006EF784 /* LocalEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8FD1CC715D6006EF784 /* LocalEatsUITests.swift */; };
+		2B2D5FAB1CC73136008B6740 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */; };
+		2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */; };
+		2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA789E41CC72EB80075880D /* YelpAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +35,68 @@
 			remoteGlobalIDString = 2B14E8D61CC715D6006EF784;
 			remoteInfo = LocalEats;
 		};
+		2BA789D31CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		2BA789D51CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		2BA789D71CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftOSX;
+		};
+		2BA789D91CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftOSXDemo;
+		};
+		2BA789DB1CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		2BA789DD1CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		2BA789DF1CC72D4B0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		2BA789E11CC72D5A0075880D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2B14E8D71CC715D6006EF784 /* LocalEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B14E8DC1CC715D6006EF784 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2B14E8DC1CC715D6006EF784 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2B14E8DF1CC715D6006EF784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B14E8E21CC715D6006EF784 /* LocalEats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalEats.xcdatamodel; sourceTree = "<group>"; };
 		2B14E8E41CC715D6006EF784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +108,10 @@
 		2B14E8F91CC715D6006EF784 /* LocalEatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalEatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B14E8FD1CC715D6006EF784 /* LocalEatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEatsUITests.swift; sourceTree = "<group>"; };
 		2B14E8FF1CC715D6006EF784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPILoader.swift; sourceTree = "<group>"; };
+		2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		2BA789E41CC72EB80075880D /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpAPIClient.swift; path = "../../../Downloads/yelpitoff-master/YelpAPIClient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2D5FAB1CC73136008B6740 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +143,12 @@
 		2B14E8CE1CC715D6006EF784 = {
 			isa = PBXGroup;
 			children = (
+				2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */,
 				2B14E8D91CC715D6006EF784 /* LocalEats */,
 				2B14E8F11CC715D6006EF784 /* LocalEatsTests */,
 				2B14E8FC1CC715D6006EF784 /* LocalEatsUITests */,
 				2B14E8D81CC715D6006EF784 /* Products */,
+				2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +166,11 @@
 			isa = PBXGroup;
 			children = (
 				2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */,
-				2B14E8DC1CC715D6006EF784 /* ViewController.swift */,
+				2B2D5FB21CC73143008B6740 /* Model */,
+				2B2D5FB31CC7314B008B6740 /* View */,
 				2B14E8DE1CC715D6006EF784 /* Main.storyboard */,
 				2B14E8E41CC715D6006EF784 /* Assets.xcassets */,
+				2B2D5FB41CC73154008B6740 /* Controller */,
 				2B14E8E61CC715D6006EF784 /* LaunchScreen.storyboard */,
 				2B14E8E91CC715D6006EF784 /* Info.plist */,
 				2B14E8E11CC715D6006EF784 /* LocalEats.xcdatamodeld */,
@@ -128,6 +196,52 @@
 			path = LocalEatsUITests;
 			sourceTree = "<group>";
 		};
+		2B2D5FB21CC73143008B6740 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BA789E31CC72EA30075880D /* YelpAPI */,
+				2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B2D5FB31CC7314B008B6740 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B2D5FB41CC73154008B6740 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B14E8DC1CC715D6006EF784 /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2BA789CA1CC72D4B0075880D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BA789D41CC72D4B0075880D /* OAuthSwift.framework */,
+				2BA789D61CC72D4B0075880D /* OAuthSwiftDemo.app */,
+				2BA789D81CC72D4B0075880D /* OAuthSwift.framework */,
+				2BA789DA1CC72D4B0075880D /* OAuthSwiftOSXDemo.app */,
+				2BA789DC1CC72D4B0075880D /* OAuthSwift.framework */,
+				2BA789DE1CC72D4B0075880D /* OAuthSwift.framework */,
+				2BA789E01CC72D4B0075880D /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BA789E31CC72EA30075880D /* YelpAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2BA789E41CC72EB80075880D /* YelpAPIClient.swift */,
+			);
+			name = YelpAPI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +256,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2BA789E21CC72D5A0075880D /* PBXTargetDependency */,
 			);
 			name = LocalEats;
 			productName = LocalEats;
@@ -221,6 +336,12 @@
 			mainGroup = 2B14E8CE1CC715D6006EF784;
 			productRefGroup = 2B14E8D81CC715D6006EF784 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2BA789CA1CC72D4B0075880D /* Products */;
+					ProjectRef = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2B14E8D61CC715D6006EF784 /* LocalEats */,
@@ -229,6 +350,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2BA789D41CC72D4B0075880D /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2BA789D31CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789D61CC72D4B0075880D /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 2BA789D51CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789D81CC72D4B0075880D /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2BA789D71CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789DA1CC72D4B0075880D /* OAuthSwiftOSXDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftOSXDemo.app;
+			remoteRef = 2BA789D91CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789DC1CC72D4B0075880D /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2BA789DB1CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789DE1CC72D4B0075880D /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 2BA789DD1CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2BA789E01CC72D4B0075880D /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 2BA789DF1CC72D4B0075880D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2B14E8D51CC715D6006EF784 /* Resources */ = {
@@ -262,7 +435,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B14E8DD1CC715D6006EF784 /* ViewController.swift in Sources */,
+				2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */,
+				2B14E8DD1CC715D6006EF784 /* MainViewController.swift in Sources */,
+				2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */,
 			);
@@ -296,6 +471,11 @@
 			isa = PBXTargetDependency;
 			target = 2B14E8D61CC715D6006EF784 /* LocalEats */;
 			targetProxy = 2B14E8FA1CC715D6006EF784 /* PBXContainerItemProxy */;
+		};
+		2BA789E21CC72D5A0075880D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 2BA789E11CC72D5A0075880D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -491,6 +671,7 @@
 				2B14E9041CC715D6006EF784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B14E9051CC715D6006EF784 /* Build configuration list for PBXNativeTarget "LocalEatsTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +680,7 @@
 				2B14E9071CC715D6006EF784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B14E9081CC715D6006EF784 /* Build configuration list for PBXNativeTarget "LocalEatsUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +689,7 @@
 				2B14E90A1CC715D6006EF784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
