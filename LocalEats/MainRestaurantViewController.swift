@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class MainViewController: UIViewController, CLLocationManagerDelegate {
+class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var locationForYelp: CLLocation!
 

@@ -32,6 +32,7 @@ class YelpAPILoader {
     class func didLoadRestaurants(data: NSData, response: NSHTTPURLResponse) -> Void {
         do {
             let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+            print(feedDictionary)
             list.updateRestaurants(feedDictionary)
         } catch let error as NSError {
             print("ERROR: \(error.localizedDescription)")

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */; };
-		2B14E8DD1CC715D6006EF784 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DC1CC715D6006EF784 /* MainViewController.swift */; };
+		2B14E8DD1CC715D6006EF784 /* MainRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */; };
 		2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8DE1CC715D6006EF784 /* Main.storyboard */; };
 		2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8E11CC715D6006EF784 /* LocalEats.xcdatamodeld */; };
 		2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8E41CC715D6006EF784 /* Assets.xcassets */; };
@@ -22,6 +22,7 @@
 		2B2D5FBD1CC747A9008B6740 /* RestaurantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FBC1CC747A9008B6740 /* RestaurantList.swift */; };
 		2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */; };
 		2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA789E41CC72EB80075880D /* YelpAPIClient.swift */; };
+		2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +122,7 @@
 /* Begin PBXFileReference section */
 		2B14E8D71CC715D6006EF784 /* LocalEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B14E8DC1CC715D6006EF784 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRestaurantViewController.swift; sourceTree = "<group>"; };
 		2B14E8DF1CC715D6006EF784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B14E8E21CC715D6006EF784 /* LocalEats.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalEats.xcdatamodel; sourceTree = "<group>"; };
 		2B14E8E41CC715D6006EF784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../Downloads/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		2BA789E41CC72EB80075880D /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpAPIClient.swift; path = "../../../Downloads/yelpitoff-master/YelpAPIClient.swift"; sourceTree = "<group>"; };
+		2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				2BA789E31CC72EA30075880D /* YelpAPI */,
 				2B2D5FBC1CC747A9008B6740 /* RestaurantList.swift */,
 				2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */,
+				2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,7 +247,7 @@
 		2B2D5FB41CC73154008B6740 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2B14E8DC1CC715D6006EF784 /* MainViewController.swift */,
+				2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -469,8 +472,9 @@
 			files = (
 				2B2D5FBD1CC747A9008B6740 /* RestaurantList.swift in Sources */,
 				2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */,
-				2B14E8DD1CC715D6006EF784 /* MainViewController.swift in Sources */,
+				2B14E8DD1CC715D6006EF784 /* MainRestaurantViewController.swift in Sources */,
 				2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */,
+				2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */,
 				2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */,

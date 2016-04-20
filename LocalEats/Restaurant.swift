@@ -8,6 +8,10 @@
 
 import UIKit
 
+func ==(lhs: Restaurant, rhs: Restaurant) -> Bool {
+    return lhs.id == rhs.id
+}
+
 class Restaurant: NSObject {
     /* The restaurant's name. */
     var name: String!
@@ -25,6 +29,14 @@ class Restaurant: NSObject {
     var address: [String]!
     /* URL to access the complete business site. */
     var businessURL: String!
+    /* Unique identifier for the restaurant. */
+    var id: String!
+    /* Calculate hash value based off of id. */
+    override var hashValue: Int {
+        get {
+            return id.hashValue
+        }
+    }
 
     init(info: NSDictionary) {
         if let nameOptional = info.valueForKey("name") {
@@ -68,6 +80,11 @@ class Restaurant: NSObject {
         } else {
             businessURL = nil
         }
+        if let idOptional = info.valueForKey("id") {
+            id = idOptional as! String
+        } else {
+            id = nil
+        }
     }
     
     /* Helper function to print out all information for this restaurant object. */
@@ -77,5 +94,6 @@ class Restaurant: NSObject {
         print("distance in miles: \(self.distance)")
         print("phone number: \(self.phoneNumber)")
         print("address: \(self.address[0])")
+        print("id: \(self.id)")
     }
 }
