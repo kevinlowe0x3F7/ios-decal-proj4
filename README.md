@@ -15,14 +15,12 @@ given location
 * Filter and sort restaurants based on price and distance
 
 ## Control Flow
-* For a first time user, they would be prompted to make an account,
-entering a username and password. Once an account is made, the user will now
-see the list of restaurants, presented one by one, with some basic
-information on the restaurant (name, rating, price, etc.).The user
-can decide whether to skip onto the next restaurant or save the restaurant
-for later, either by swiping left or right or through buttons on the
-screen. Once they are done looking at restaurants, they can go into their
-profile and see the restaurants in a saved list.
+* The user will now see the list of restaurants, presented one by one,
+with some basic information on the restaurant (name, rating, price, etc.).
+The user can decide whether to skip onto the next restaurant or save the
+restaurant for later, either by swiping left or right or through buttons
+on the screen. Once they are done looking at restaurants, they can go into
+their profile and see the restaurants in a saved list.
 
 ## Implementation
 
@@ -57,8 +55,6 @@ profile and see the restaurants in a saved list.
 * DetailedRestaurantView
     * View that contains more information than the basic profile, such as
     recent reviews, location, business hours, phone number, etc.
-* AccountCreationView
-    * View to make a unique account, presented for first-time users.
 
 ### Controller
 * MainRestaurantViewController
