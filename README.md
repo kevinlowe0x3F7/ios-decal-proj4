@@ -74,6 +74,4 @@ their profile and see the restaurants in a saved list.
 * DetailedRestaurantViewController
     * Grabs more detailed information from the model and displays it in
     a DetailedRestaurantView.
-* AccountCreationViewController
-    * Take the information that the user inputs and creates a user profile.
 
