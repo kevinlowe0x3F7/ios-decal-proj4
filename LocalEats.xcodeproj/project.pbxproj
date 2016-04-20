@@ -17,6 +17,8 @@
 		2B14E8FE1CC715D6006EF784 /* LocalEatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8FD1CC715D6006EF784 /* LocalEatsUITests.swift */; };
 		2B2D5FAB1CC73136008B6740 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */; };
 		2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */; };
+		2B2D5FB71CC73C3C008B6740 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA789D41CC72D4B0075880D /* OAuthSwift.framework */; };
+		2B2D5FB81CC73C3C008B6740 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA789D41CC72D4B0075880D /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA789E41CC72EB80075880D /* YelpAPIClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2B14E8D61CC715D6006EF784;
 			remoteInfo = LocalEats;
+		};
+		2B2D5FB91CC73C3C008B6740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BA789C91CC72D4B0075880D /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
 		};
 		2BA789D31CC72D4B0075880D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -93,6 +102,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2B2D5FBB1CC73C3C008B6740 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B2D5FB81CC73C3C008B6740 /* OAuthSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B14E8D71CC715D6006EF784 /* LocalEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2D5FB71CC73C3C008B6740 /* OAuthSwift.framework in Frameworks */,
 				2B2D5FAB1CC73136008B6740 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,11 +276,13 @@
 				2B14E8D31CC715D6006EF784 /* Sources */,
 				2B14E8D41CC715D6006EF784 /* Frameworks */,
 				2B14E8D51CC715D6006EF784 /* Resources */,
+				2B2D5FBB1CC73C3C008B6740 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2BA789E21CC72D5A0075880D /* PBXTargetDependency */,
+				2B2D5FBA1CC73C3C008B6740 /* PBXTargetDependency */,
 			);
 			name = LocalEats;
 			productName = LocalEats;
@@ -472,6 +498,11 @@
 			target = 2B14E8D61CC715D6006EF784 /* LocalEats */;
 			targetProxy = 2B14E8FA1CC715D6006EF784 /* PBXContainerItemProxy */;
 		};
+		2B2D5FBA1CC73C3C008B6740 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 2B2D5FB91CC73C3C008B6740 /* PBXContainerItemProxy */;
+		};
 		2BA789E21CC72D5A0075880D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OAuthSwift;
@@ -588,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = LocalEats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lowekevin.LocalEats;
@@ -599,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = LocalEats/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lowekevin.LocalEats;
