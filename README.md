@@ -12,11 +12,11 @@ which are randomly presented in a Tinder-like manner.
 * Ability to see restaurants nearby based on current location or a
 given location
 * Ability to save restaurants as a user profile even with killed app
-* Filter and sort restaurants based on price and distance
+* Ability to sort restaurants based on distance
 
 ## Control Flow
 * The user will now see the list of restaurants, presented one by one,
-with some basic information on the restaurant (name, rating, price, etc.).
+with some basic information on the restaurant (name, rating, etc.).
 The user can decide whether to skip onto the next restaurant or save the
 restaurant for later, either by swiping left or right or through buttons
 on the screen. Once they are done looking at restaurants, they can go into
@@ -46,7 +46,7 @@ their profile and see the restaurants in a saved list.
     restaurants that they have saved
 * SettingsView
     * Settings for user to toggle options, such as to give a location,
-    filter based on price, sort them, etc.
+    sort them, etc.
 * BasicRestaurantView
     * A subview contained within the main restaurant view. Holds basic
     information for some restaurant. In other words, presents a basic
@@ -54,7 +54,8 @@ their profile and see the restaurants in a saved list.
     price, distance, and rating.
 * DetailedRestaurantView
     * View that contains more information than the basic profile, such as
-    recent reviews, location, business hours, phone number, etc.
+    recent reviews, location, business hours, phone number, etc. Achieved
+    by sending the user to the actual Yelp page.
 
 ### Controller
 * MainRestaurantViewController
