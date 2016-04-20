@@ -41,6 +41,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationForYelp = locations[locations.count - 1]
+        YelpAPILoader.loadRestaurants(locationForYelp)
     }
 }
 
