@@ -55,7 +55,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         let viewWidth = screen.width - 50
         let viewHeight = screen.height - (screen.height * 4 / 10) - 15
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
-        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: loader.list.getNextRestaurant()!)
+        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: loader.list.getNextRestaurant()!, delegate: self)
         self.view.addSubview(restaurantView)
     }
 }

@@ -33,6 +33,7 @@ class RestaurantList: NSObject {
             currentIndex = currentIndex + 1
             return nextRestaurant
         } else {
+            print("out of restaurants")
             return nil
         }
     }

@@ -5,6 +5,8 @@
 //  Created by Kevin Lowe on 4/20/16.
 //  Copyright © 2016 Kevin Lowe. All rights reserved.
 //
+//  All animation code comes from SwiftTinderCards
+//  https://github.com/lgandecki/SwiftTinderCards
 
 import UIKit
 
@@ -19,15 +21,20 @@ class BasicDraggableRestaurantView: UIView {
     var panGestureRecognizer: UIPanGestureRecognizer!
     var restaurant: Restaurant!
     var imageView: UIImageView!
+    var originalPoint = CGPoint()
+    var xFromCenter = CGFloat()
+    var yFromCenter = CGFloat()
+    var delegate: MainRestaurantViewController!
     
-    init(frame: CGRect, restaurant: Restaurant) {
+    init(frame: CGRect, restaurant: Restaurant, delegate: MainRestaurantViewController) {
         super.init(frame: frame)
         let viewSize = frame.size
         self.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         self.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1).CGColor
         self.layer.borderWidth = CGFloat(2.0)
         self.restaurant = restaurant
-        
+        self.delegate = delegate
+
         let imageSize = viewSize.width - 50
         imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
         imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.restaurant.imageURL)!)!)
@@ -69,6 +76,92 @@ class BasicDraggableRestaurantView: UIView {
     }
     
     func beingDragged(gestureRecognizer: UIPanGestureRecognizer) {
-        print("dragged")
+        xFromCenter = gestureRecognizer.translationInView(self).x
+        yFromCenter = gestureRecognizer.translationInView(self).y
+        
+        switch (gestureRecognizer.state) {
+        case .Began:
+            self.originalPoint = self.center
+            break
+        case .Changed:
+            //%%% dictates rotation (see ROTATION_MAX and ROTATION_STRENGTH for details)
+            let rotationStrength = min(xFromCenter / ROTATION_STRENGTH, ROTATION_MAX);
+            
+            //%%% degree change in radians
+            let rotationAngel = (ROTATION_ANGLE * rotationStrength);
+            
+            //%%% amount the height changes when you move the card up to a certain point
+            let scale = max(1 - fabs(rotationStrength) / SCALE_STRENGTH, SCALE_MAX);
+            
+            //%%% move the object's center by center + gesture coordinate
+            self.center = CGPointMake(self.originalPoint.x + xFromCenter, self.originalPoint.y + yFromCenter);
+            
+            //%%% rotate by certain amount
+            let transform = CGAffineTransformMakeRotation(rotationAngel);
+            
+            //%%% scale by certain amount
+            let scaleTransform = CGAffineTransformScale(transform, scale, scale);
+            
+            //%%% apply transformations
+            self.transform = scaleTransform;
+            
+            //self.updateOverlay(xFromCenter)
+            break
+        case .Ended:
+            afterSwipeAction()
+            break
+        default:
+            break
+        }
+    }
+    
+    
+    func afterSwipeAction() {
+        if (xFromCenter > ACTION_MARGIN) {
+            rightAction();
+        } else if (xFromCenter < -ACTION_MARGIN){
+            leftAction();
+        } else {
+            animateCardBack()
+        }
+    }
+    
+    func rightAction() {
+        animateCardToTheRight()
+        //delegate?.cardSwipedRight(self)
+    }
+    
+    func animateCardToTheRight() {
+        let rightEdge = CGFloat(500)
+        animateCardOutTo(rightEdge)
+    }
+    
+    func leftAction() {
+        animateCardToTheLeft()
+        //delegate?.cardSwipedLeft(self)
+    }
+    
+    func animateCardToTheLeft() {
+        let leftEdge = CGFloat(-500)
+        animateCardOutTo(leftEdge)
+    }
+    
+    func animateCardBack() {
+        UIView.animateWithDuration(0.3, animations: {
+            self.center = self.originalPoint;
+            self.transform = CGAffineTransformMakeRotation(0);
+            }
+        )
+    }
+    
+    func animateCardOutTo(edge: CGFloat) {
+        let finishPoint = CGPointMake(edge, 2*yFromCenter + self.originalPoint.y)
+        UIView.animateWithDuration(0.3, animations: {
+            self.center = finishPoint;
+            }, completion: {
+                (value: Bool) in
+                self.removeFromSuperview()
+        })
+        
     }
 }
