@@ -16,8 +16,6 @@ class UserProfile: NSObject {
     var savedRestaurantsSet: Set<Restaurant>!
     /* Their current location or location that they want to base their search off of. */
     var location: CLLocation!
-    /* Filter options. 0 = Default ($-$$$$), 1 = $ only, 2 = $ or $$, 3 = $, $$, or $$$. */
-    var filterOption: Int!
     /* True if user wants to sort by distance, false otherwise. */
     var sortByDistance: Bool!
     
@@ -25,7 +23,6 @@ class UserProfile: NSObject {
         savedRestaurants = [Restaurant]()
         savedRestaurantsSet = Set<Restaurant>()
         location = nil
-        filterOption = 0
         sortByDistance = false
     }
     
@@ -34,6 +31,7 @@ class UserProfile: NSObject {
     }
     
     func addRestaurant(restaurant: Restaurant) {
+        print("adding restaurant to user")
         savedRestaurants.append(restaurant)
         savedRestaurantsSet.insert(restaurant)
     }

@@ -16,12 +16,14 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     var loader: YelpAPILoader!
     /* The current offset from one search. */
     var currentOffset: Int!
+    var user: UserProfile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.title = "LocalEats"
         currentOffset = 0
+        user = UserProfile()
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
         locationManager.delegate = self
@@ -49,6 +51,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationForYelp = locations[locations.count - 1]
+        user.updateLocation(locationForYelp)
         loader.loadRestaurants(locationForYelp)
         print("finished in locationManager method")
     }
@@ -59,8 +62,12 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         let viewHeight = screen.height - (screen.height * 4 / 10) - 15
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
         if let nextRestaurant = loader.list.getNextRestaurant() {
-            restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: nextRestaurant, delegate: self)
-            self.view.addSubview(restaurantView)
+            if (user.hasSaved(nextRestaurant)) {
+                grabNextRestaurant()
+            } else {
+                restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: nextRestaurant, delegate: self)
+                self.view.addSubview(restaurantView)
+            }
         } else {
             print("passed 20")
             currentOffset = currentOffset + 20
@@ -73,7 +80,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func cardSwipedRight(view: BasicDraggableRestaurantView) {
-        print("saved!")
+        if let restaurantToSave = view.restaurant {
+            user.addRestaurant(restaurantToSave)
+        }
         grabNextRestaurant()
     }
     
