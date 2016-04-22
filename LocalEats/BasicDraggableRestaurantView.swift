@@ -25,6 +25,7 @@ class BasicDraggableRestaurantView: UIView {
     var xFromCenter = CGFloat()
     var yFromCenter = CGFloat()
     var delegate: MainRestaurantViewController!
+    var overlayView: OverlayView?
     
     init(frame: CGRect, restaurant: Restaurant, delegate: MainRestaurantViewController) {
         super.init(frame: frame)
@@ -46,6 +47,7 @@ class BasicDraggableRestaurantView: UIView {
         } else {
             placeEmptyLabel()
         }
+        addOverlayView()
     }
     
     func setupLabels() {
@@ -73,6 +75,12 @@ class BasicDraggableRestaurantView: UIView {
             rating.image = UIImage(data: NSData(contentsOfURL: NSURL(string: ratingPic)!)!)
             self.addSubview(rating)
         }
+    }
+    
+    func addOverlayView() {
+        let frame = self.frame.size
+        overlayView = OverlayView(frame: CGRectMake(0, 0, frame.width, frame.height))
+        self.addSubview(overlayView!)
     }
     
     func placeEmptyLabel() {
@@ -117,7 +125,7 @@ class BasicDraggableRestaurantView: UIView {
             //%%% apply transformations
             self.transform = scaleTransform;
             
-            //self.updateOverlay(xFromCenter)
+            self.updateOverlay(xFromCenter)
             break
         case .Ended:
             afterSwipeAction()
@@ -162,6 +170,7 @@ class BasicDraggableRestaurantView: UIView {
         UIView.animateWithDuration(0.3, animations: {
             self.center = self.originalPoint;
             self.transform = CGAffineTransformMakeRotation(0);
+            self.overlayView?.alpha = 0
             }
         )
     }
@@ -174,6 +183,14 @@ class BasicDraggableRestaurantView: UIView {
                 (value: Bool) in
                 self.removeFromSuperview()
         })
-        
+    }
+    
+    func updateOverlay(distance: CGFloat) {
+        if (distance > 0) {
+            overlayView?.setMode(.Right)
+        } else {
+            overlayView?.setMode(.Left)
+        }
+        overlayView?.alpha = min(fabs(distance)/100, 0.4)
     }
 }

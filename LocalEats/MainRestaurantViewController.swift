@@ -5,6 +5,8 @@
 //  Created by Kevin Lowe on 4/19/16.
 //  Copyright © 2016 Kevin Lowe. All rights reserved.
 //
+//  red button: http://images.all-free-download.com/images/graphiclarge/round_red_x_sign_4229.jpg
+//  green button: http://iconbug.com/data/bc/256/58c263c305e5d8a66579534c3c39645d.png
 
 import UIKit
 import CoreLocation

@@ -24,6 +24,9 @@
 		2BA789E51CC72EB80075880D /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA789E41CC72EB80075880D /* YelpAPIClient.swift */; };
 		2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */; };
 		2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */; };
+		2BEF12F31CCA860900F19FB6 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12F21CCA860900F19FB6 /* OverlayView.swift */; };
+		2BEF12F71CCA8E7D00F19FB6 /* yes_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF12F61CCA8E7D00F19FB6 /* yes_stamp_trans.png */; };
+		2BEF12F91CCA8EFB00F19FB6 /* no_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF12F81CCA8EFB00F19FB6 /* no_stamp_trans.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +146,9 @@
 		2BA789E41CC72EB80075880D /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpAPIClient.swift; path = "../../../Downloads/yelpitoff-master/YelpAPIClient.swift"; sourceTree = "<group>"; };
 		2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDraggableRestaurantView.swift; sourceTree = "<group>"; };
+		2BEF12F21CCA860900F19FB6 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = ../OverlayView.swift; sourceTree = "<group>"; };
+		2BEF12F61CCA8E7D00F19FB6 /* yes_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes_stamp_trans.png; path = ../../../Desktop/yes_stamp_trans.png; sourceTree = "<group>"; };
+		2BEF12F81CCA8EFB00F19FB6 /* no_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_stamp_trans.png; path = ../../../Desktop/no_stamp_trans.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,8 @@
 				2B2D5FB31CC7314B008B6740 /* View */,
 				2B14E8DE1CC715D6006EF784 /* Main.storyboard */,
 				2B14E8E41CC715D6006EF784 /* Assets.xcassets */,
+				2BEF12F61CCA8E7D00F19FB6 /* yes_stamp_trans.png */,
+				2BEF12F81CCA8EFB00F19FB6 /* no_stamp_trans.png */,
 				2B2D5FB41CC73154008B6740 /* Controller */,
 				2B14E8E61CC715D6006EF784 /* LaunchScreen.storyboard */,
 				2B14E8E91CC715D6006EF784 /* Info.plist */,
@@ -243,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */,
+				2BEF12F21CCA860900F19FB6 /* OverlayView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -446,6 +455,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BEF12F91CCA8EFB00F19FB6 /* no_stamp_trans.png in Resources */,
+				2BEF12F71CCA8E7D00F19FB6 /* yes_stamp_trans.png in Resources */,
 				2B14E8E81CC715D6006EF784 /* LaunchScreen.storyboard in Resources */,
 				2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */,
 				2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */,
@@ -482,6 +493,7 @@
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */,
 				2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */,
+				2BEF12F31CCA860900F19FB6 /* OverlayView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
