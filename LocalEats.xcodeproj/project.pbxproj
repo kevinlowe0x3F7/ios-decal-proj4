@@ -27,6 +27,8 @@
 		2BEF12F31CCA860900F19FB6 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12F21CCA860900F19FB6 /* OverlayView.swift */; };
 		2BEF12FC1CCA8FE600F19FB6 /* no_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF12FA1CCA8FE600F19FB6 /* no_stamp_trans.png */; };
 		2BEF12FD1CCA8FE600F19FB6 /* yes_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF12FB1CCA8FE600F19FB6 /* yes_stamp_trans.png */; };
+		2BEF13041CCAC47300F19FB6 /* no_button_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF13021CCAC47300F19FB6 /* no_button_trans.png */; };
+		2BEF13051CCAC47300F19FB6 /* yes_button_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BEF13031CCAC47300F19FB6 /* yes_button_trans.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		2BEF12F21CCA860900F19FB6 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverlayView.swift; path = ../OverlayView.swift; sourceTree = "<group>"; };
 		2BEF12FA1CCA8FE600F19FB6 /* no_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_stamp_trans.png; path = ../no_stamp_trans.png; sourceTree = "<group>"; };
 		2BEF12FB1CCA8FE600F19FB6 /* yes_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes_stamp_trans.png; path = ../yes_stamp_trans.png; sourceTree = "<group>"; };
+		2BEF13021CCAC47300F19FB6 /* no_button_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_button_trans.png; path = ../no_button_trans.png; sourceTree = "<group>"; };
+		2BEF13031CCAC47300F19FB6 /* yes_button_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes_button_trans.png; path = ../yes_button_trans.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,8 @@
 				2B14E8E41CC715D6006EF784 /* Assets.xcassets */,
 				2BEF12FA1CCA8FE600F19FB6 /* no_stamp_trans.png */,
 				2BEF12FB1CCA8FE600F19FB6 /* yes_stamp_trans.png */,
+				2BEF13021CCAC47300F19FB6 /* no_button_trans.png */,
+				2BEF13031CCAC47300F19FB6 /* yes_button_trans.png */,
 				2B2D5FB41CC73154008B6740 /* Controller */,
 				2B14E8E61CC715D6006EF784 /* LaunchScreen.storyboard */,
 				2B14E8E91CC715D6006EF784 /* Info.plist */,
@@ -458,6 +464,8 @@
 				2BEF12FD1CCA8FE600F19FB6 /* yes_stamp_trans.png in Resources */,
 				2B14E8E81CC715D6006EF784 /* LaunchScreen.storyboard in Resources */,
 				2BEF12FC1CCA8FE600F19FB6 /* no_stamp_trans.png in Resources */,
+				2BEF13051CCAC47300F19FB6 /* yes_button_trans.png in Resources */,
+				2BEF13041CCAC47300F19FB6 /* no_button_trans.png in Resources */,
 				2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */,
 				2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */,
 			);

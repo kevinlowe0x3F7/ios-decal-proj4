@@ -6,7 +6,7 @@
 //  Copyright © 2016 Kevin Lowe. All rights reserved.
 //
 //  red button: http://images.all-free-download.com/images/graphiclarge/round_red_x_sign_4229.jpg
-//  green button: http://iconbug.com/data/bc/256/58c263c305e5d8a66579534c3c39645d.png
+//  green button: hhttp://cliparts.co/cliparts/kcK/B8p/kcKB8pagi.jpg
 
 import UIKit
 import CoreLocation
@@ -19,6 +19,8 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     /* The current offset from one search. */
     var currentOffset: Int!
     var user: UserProfile!
+    var yesButton: UIButton!
+    var noButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,8 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.navigationItem.title = "LocalEats"
         currentOffset = 0
         user = UserProfile()
+        
+        addButtons()
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
         locationManager.delegate = self
@@ -58,6 +62,39 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         print("finished in locationManager method")
     }
     
+    func addButtons() {
+        let screen = UIScreen.mainScreen().bounds.size
+        let buttonSize = screen.width / 5
+        let centerX = screen.width / 2 - buttonSize / 2
+        let mainViewHeight = screen.height - (screen.height * 4 / 10) - 15 + (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
+        let buttonY = mainViewHeight + screen.height / 20
+        
+        yesButton = UIButton(frame: CGRectMake(centerX + screen.width / 5, buttonY, buttonSize, buttonSize))
+        yesButton.setImage(UIImage(named: "yes_button_trans.png"), forState: UIControlState.Normal)
+        yesButton.addTarget(self, action: #selector(MainRestaurantViewController.yesButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(yesButton)
+        yesButton.alpha = 0
+        
+        noButton = UIButton(frame: CGRectMake(centerX - screen.width / 5, buttonY, buttonSize, buttonSize))
+        noButton.setImage(UIImage(named: "no_button_trans.png"), forState: UIControlState.Normal)
+        noButton.addTarget(self, action: #selector(MainRestaurantViewController.noButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(noButton)
+        noButton.alpha = 0
+    }
+    
+    func yesButtonTapped() {
+        self.restaurantView.animateCardToTheRight()
+        if let restaurantToSave = self.restaurantView.restaurant {
+            user.addRestaurant(restaurantToSave)
+        }
+        grabNextRestaurant()
+    }
+    
+    func noButtonTapped() {
+        self.restaurantView.animateCardToTheLeft()
+        grabNextRestaurant()
+    }
+    
     func grabNextRestaurant() {
         let screen = UIScreen.mainScreen().bounds.size
         let viewWidth = screen.width - 50
@@ -69,6 +106,8 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
             } else {
                 restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: nextRestaurant, delegate: self)
                 self.view.addSubview(restaurantView)
+                yesButton.alpha = 1
+                noButton.alpha = 1
             }
         } else {
             print("passed 20")
