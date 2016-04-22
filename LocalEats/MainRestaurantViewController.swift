@@ -14,11 +14,14 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     var locationForYelp: CLLocation!
     var restaurantView: BasicDraggableRestaurantView!
     var loader: YelpAPILoader!
+    /* The current offset from one search. */
+    var currentOffset: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.title = "LocalEats"
+        currentOffset = 0
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
         locationManager.delegate = self
@@ -55,8 +58,14 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         let viewWidth = screen.width - 50
         let viewHeight = screen.height - (screen.height * 4 / 10) - 15
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
-        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: loader.list.getNextRestaurant()!, delegate: self)
-        self.view.addSubview(restaurantView)
+        if let nextRestaurant = loader.list.getNextRestaurant() {
+            restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: nextRestaurant, delegate: self)
+            self.view.addSubview(restaurantView)
+        } else {
+            print("passed 20")
+            currentOffset = currentOffset + 20
+            loader.loadRestaurants(locationForYelp, offset: currentOffset)
+        }
     }
     
     func cardSwipedLeft(view: BasicDraggableRestaurantView) {

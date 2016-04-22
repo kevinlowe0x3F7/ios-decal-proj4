@@ -17,12 +17,9 @@ class RestaurantList: NSObject {
     /* The current location that we are basing our restaurants off of. When this location
     gets changed, we reset the list, the offset, and the location. */
     var currentLocation: CLLocation!
-    /* The current offset from one search. */
-    var currentOffset: Int!
     
     override init() {
         currentIndex = 0
-        currentOffset = 0
         currentLocation = nil
     }
     
@@ -40,6 +37,7 @@ class RestaurantList: NSObject {
     
     /* Happens when we have a new location or request more restaurants. */
     func updateRestaurants(data: NSDictionary) {
+        currentIndex = 0
         restaurants = [Restaurant]()
         for restaurantInfo in data.valueForKey("businesses") as! NSArray {
             let restaurant = Restaurant(info: restaurantInfo as! NSDictionary)

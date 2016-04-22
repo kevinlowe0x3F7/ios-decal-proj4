@@ -35,13 +35,17 @@ class BasicDraggableRestaurantView: UIView {
         self.restaurant = restaurant
         self.delegate = delegate
 
-        let imageSize = viewSize.width - 50
-        imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
-        imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.restaurant.imageURL)!)!)
-        self.addSubview(imageView)
-        panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BasicDraggableRestaurantView.beingDragged(_:)))
-        self.addGestureRecognizer(panGestureRecognizer)
-        setupLabels()
+        if let restaurantOptional = self.restaurant {
+            let imageSize = viewSize.width - 50
+            imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
+            imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: restaurantOptional.imageURL)!)!)
+            self.addSubview(imageView)
+            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BasicDraggableRestaurantView.beingDragged(_:)))
+            self.addGestureRecognizer(panGestureRecognizer)
+            setupLabels()
+        } else {
+            placeEmptyLabel()
+        }
     }
     
     func setupLabels() {
@@ -69,6 +73,14 @@ class BasicDraggableRestaurantView: UIView {
             rating.image = UIImage(data: NSData(contentsOfURL: NSURL(string: ratingPic)!)!)
             self.addSubview(rating)
         }
+    }
+    
+    func placeEmptyLabel() {
+        let frame = self.frame.size
+        let label = UILabel(frame: CGRectMake(0, frame.height / 2, frame.width, 100))
+        label.numberOfLines = 3
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Out of restaurants" + "\n" + "try a different location"
     }
     
     required init?(coder aDecoder: NSCoder) {
