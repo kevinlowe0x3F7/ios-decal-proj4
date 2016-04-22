@@ -61,7 +61,10 @@ their profile and see the restaurants in a saved list.
 ### Controller
 * MainRestaurantViewController
     * Handles swipe gestures to save a restaurant or move onto the next one,
-    also handles transitions to settings and user profile.
+    also handles transitions to settings and user profile. When the
+    BasicDraggableRestaurantView is tapped, the user will be sent to the
+    DetailedRestaurantView which displays more information for the
+    restaurant.
 * SavedRestaurantViewController
     * Organizes the table view, with option to delete a restaurant from
     the profile. Tapping on an restaurant in this table view will take
@@ -69,10 +72,6 @@ their profile and see the restaurants in a saved list.
 * SettingsViewController
     * Settings for user to toggle options, such as to give a location,
     sort them, etc.
-* BasicRestaurantViewController
-    * Grabs the data for a restaurant from the model and displays it in
-    the BasicRestaurantView. Handles the tap gesture that takes the user
-    to a detailed view of the same restaurant.
 * DetailedRestaurantViewController
     * Grabs more detailed information from the model and displays it in
     a DetailedRestaurantView.
