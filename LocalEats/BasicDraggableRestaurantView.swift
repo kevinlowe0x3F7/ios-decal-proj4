@@ -22,13 +22,46 @@ class BasicDraggableRestaurantView: UIView {
     
     init(frame: CGRect, restaurant: Restaurant) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.whiteColor()
+        let viewSize = frame.size
+        self.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        self.layer.borderColor = UIColor(red: 160/255, green: 160/255, blue: 160/255, alpha: 1).CGColor
+        self.layer.borderWidth = CGFloat(2.0)
         self.restaurant = restaurant
-        imageView = UIImageView(frame: CGRectMake(0, 0, 300, 300))
+        
+        let imageSize = viewSize.width - 50
+        imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
         imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.restaurant.imageURL)!)!)
         self.addSubview(imageView)
         panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BasicDraggableRestaurantView.beingDragged(_:)))
         self.addGestureRecognizer(panGestureRecognizer)
+        setupLabels()
+    }
+    
+    func setupLabels() {
+        let frame = self.frame.size
+        let imageY = 25 + frame.width - 50
+        let nameSize = CGFloat(30)
+        if let restaurantName = restaurant.name {
+            let name: UILabel = UILabel(frame: CGRectMake(0, imageY + 5, frame.width, nameSize))
+            name.textAlignment = NSTextAlignment.Center
+            name.font = UIFont(name: "Helvetica Neue", size: 22)
+            name.text = "\(restaurantName)"
+            self.addSubview(name)
+        }
+        
+        if let distance = restaurant.distance {
+            let distanceLabel: UILabel = UILabel(frame: CGRectMake(15, CGFloat(imageY + 10 + nameSize), frame.width / 2, 30))
+            distanceLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+            distanceLabel.text = "\(distance) mi"
+            self.addSubview(distanceLabel)
+        }
+        
+        if let ratingPic = restaurant.ratingURL {
+            let ratingWidth = frame.width / 2 - 10
+            let rating: UIImageView = UIImageView(frame: CGRectMake(frame.width / 2, CGFloat(imageY + 12 + nameSize), ratingWidth, 25))
+            rating.image = UIImage(data: NSData(contentsOfURL: NSURL(string: ratingPic)!)!)
+            self.addSubview(rating)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

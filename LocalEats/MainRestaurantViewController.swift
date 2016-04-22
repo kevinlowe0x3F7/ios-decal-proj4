@@ -17,7 +17,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 0xF3, green: 0xF3, blue: 0xF3, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.title = "LocalEats"
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
@@ -52,7 +52,10 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func grabFirstRestaurant() {
         let screen = UIScreen.mainScreen().bounds.size
-        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(screen.width / 2 - 150, 100, 300, 400), restaurant: loader.list.getNextRestaurant()!)
+        let viewWidth = screen.width - 50
+        let viewHeight = screen.height - (screen.height * 4 / 10) - 15
+        let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
+        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: loader.list.getNextRestaurant()!)
         self.view.addSubview(restaurantView)
     }
 }
