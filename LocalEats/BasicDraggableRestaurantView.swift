@@ -128,7 +128,7 @@ class BasicDraggableRestaurantView: UIView {
     
     func rightAction() {
         animateCardToTheRight()
-        //delegate?.cardSwipedRight(self)
+        delegate?.cardSwipedRight(self)
     }
     
     func animateCardToTheRight() {
@@ -138,7 +138,7 @@ class BasicDraggableRestaurantView: UIView {
     
     func leftAction() {
         animateCardToTheLeft()
-        //delegate?.cardSwipedLeft(self)
+        delegate?.cardSwipedLeft(self)
     }
     
     func animateCardToTheLeft() {

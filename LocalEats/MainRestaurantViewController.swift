@@ -50,7 +50,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         print("finished in locationManager method")
     }
     
-    func grabFirstRestaurant() {
+    func grabNextRestaurant() {
         let screen = UIScreen.mainScreen().bounds.size
         let viewWidth = screen.width - 50
         let viewHeight = screen.height - (screen.height * 4 / 10) - 15
@@ -58,5 +58,15 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(25, viewY, viewWidth, viewHeight), restaurant: loader.list.getNextRestaurant()!, delegate: self)
         self.view.addSubview(restaurantView)
     }
+    
+    func cardSwipedLeft(view: BasicDraggableRestaurantView) {
+        grabNextRestaurant()
+    }
+    
+    func cardSwipedRight(view: BasicDraggableRestaurantView) {
+        print("saved!")
+        grabNextRestaurant()
+    }
+    
 }
 

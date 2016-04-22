@@ -39,7 +39,7 @@ class YelpAPILoader {
         do {
             let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             list.updateRestaurants(feedDictionary)
-            viewController.grabFirstRestaurant()
+            viewController.grabNextRestaurant()
             print("finished creating list")
         } catch let error as NSError {
             print("ERROR: \(error.localizedDescription)")
