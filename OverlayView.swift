@@ -7,6 +7,8 @@
 //
 //  OverlayView class from SwiftTinderCards
 //  https://github.com/lgandecki/SwiftTinderCards
+//  yes stamp: http://l7.alamy.com/zooms/94816e0b38bb470987cd6a85540d073b/yes-green-stamp-fk0c36.jpg
+//  no stamp: http://previews.123rf.com/images/aquir/aquir1308/aquir130800302/21555719-no-red-square-stamp-Stock-Photo.jpg
 
 import UIKit
 enum OverlayViewMode {
