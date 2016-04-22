@@ -47,11 +47,12 @@ their profile and see the restaurants in a saved list.
 * SettingsView
     * Settings for user to toggle options, such as to give a location,
     sort them, etc.
-* BasicRestaurantView
+* BasicDraggableRestaurantView
     * A subview contained within the main restaurant view. Holds basic
     information for some restaurant. In other words, presents a basic
     profile with some information for each restaurant including name,
-    price, distance, and rating.
+    distance, and rating. Able to be dragged left and right similar to
+    the Tinder animation.
 * DetailedRestaurantView
     * View that contains more information than the basic profile, such as
     recent reviews, location, business hours, phone number, etc. Achieved
@@ -75,4 +76,9 @@ their profile and see the restaurants in a saved list.
 * DetailedRestaurantViewController
     * Grabs more detailed information from the model and displays it in
     a DetailedRestaurantView.
+
+## Credits
+* OAuthSwift for abstraction of OAuth process
+* YelpItOff for Yelp API requests using OAuthSwigt
+* SwiftTinderCards for guidance on Tinder swipe animation effect
 

@@ -12,10 +12,15 @@ import CoreLocation
 class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     var locationForYelp: CLLocation!
+    var restaurantView: BasicDraggableRestaurantView!
+    var loader: YelpAPILoader!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red: 0xF3, green: 0xF3, blue: 0xF3, alpha: 1)
+        self.navigationItem.title = "LocalEats"
         // Do any additional setup after loading the view, typically from a nib.
+        loader = YelpAPILoader(vc: self)
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         if CLLocationManager.authorizationStatus() == .NotDetermined {
@@ -41,7 +46,14 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationForYelp = locations[locations.count - 1]
-        YelpAPILoader.loadRestaurants(locationForYelp)
+        loader.loadRestaurants(locationForYelp)
+        print("finished in locationManager method")
+    }
+    
+    func grabFirstRestaurant() {
+        let screen = UIScreen.mainScreen().bounds.size
+        restaurantView = BasicDraggableRestaurantView(frame: CGRectMake(screen.width / 2 - 150, 100, 300, 400), restaurant: loader.list.getNextRestaurant()!)
+        self.view.addSubview(restaurantView)
     }
 }
 

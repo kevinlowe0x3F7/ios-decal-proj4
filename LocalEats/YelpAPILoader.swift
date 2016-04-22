@@ -11,10 +11,16 @@ import CoreLocation
 
 class YelpAPILoader {
     /* A list of restaurants object that the YelpAPILoader will pass its JSON into. */
-    static var list: RestaurantList = RestaurantList()
+    var list: RestaurantList = RestaurantList()
+    /* A reference to the view controller that's requesting the data to know that it's done. */
+    var viewController: MainRestaurantViewController!
+    
+    init(vc: MainRestaurantViewController) {
+        self.viewController = vc
+    }
 
     /* Load the initial set of 20 restaurants with the offset as 0. */
-    class func loadRestaurants(location: CLLocation) {
+    func loadRestaurants(location: CLLocation) {
         list.updateLocation(location)
         let parameters = ["term": "restaurants", "ll": "\(location.coordinate.latitude),\(location.coordinate.longitude)", "sort": "0"]
         let client = YelpAPIClient()
@@ -22,24 +28,25 @@ class YelpAPILoader {
     }
     
     /* Load a set of 20 restaurants with a given offset. */
-    class func loadRestaurants(location: CLLocation, offset: Int) {
+    func loadRestaurants(location: CLLocation, offset: Int) {
         list.updateLocation(location)
         let parameters = ["term": "restaurants", "offset": "\(offset)", "ll": "\(location.coordinate.latitude),\(location.coordinate.longitude)", "sort": "0"]
         let client = YelpAPIClient()
         client.searchPlacesWithParameters(parameters, successSearch: didLoadRestaurants, failureSearch: failedToLoadRestaurants)
     }
     
-    class func didLoadRestaurants(data: NSData, response: NSHTTPURLResponse) -> Void {
+    func didLoadRestaurants(data: NSData, response: NSHTTPURLResponse) -> Void {
         do {
             let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-            print(feedDictionary)
             list.updateRestaurants(feedDictionary)
+            viewController.grabFirstRestaurant()
+            print("finished creating list")
         } catch let error as NSError {
             print("ERROR: \(error.localizedDescription)")
         }
     }
     
-    class func failedToLoadRestaurants(error: NSError) -> Void {
+    func failedToLoadRestaurants(error: NSError) -> Void {
         print("ERROR: \(error.localizedDescription)")
     }
 }

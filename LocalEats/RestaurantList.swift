@@ -43,7 +43,6 @@ class RestaurantList: NSObject {
         for restaurantInfo in data.valueForKey("businesses") as! NSArray {
             let restaurant = Restaurant(info: restaurantInfo as! NSDictionary)
             restaurants.append(restaurant)
-            restaurant.printInfo()
         }
     }
     
