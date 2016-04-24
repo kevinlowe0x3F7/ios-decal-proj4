@@ -21,6 +21,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     var user: UserProfile!
     var yesButton: UIButton!
     var noButton: UIButton!
+    var userProfileBarButtonItem: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,10 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         noButton.addTarget(self, action: #selector(MainRestaurantViewController.noButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(noButton)
         noButton.alpha = 0
+        
+        userProfileBarButtonItem = UIBarButtonItem(title: "User Profile", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
+        self.navigationItem.rightBarButtonItem = userProfileBarButtonItem
+        
     }
     
     func yesButtonTapped() {
@@ -94,6 +99,13 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.restaurantView.animateCardToTheLeft()
         grabNextRestaurant()
     }
+    
+    func userProfileTapped() {
+        let vc = SavedRestaurantsTableViewController()
+        vc.user = self.user
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     func grabNextRestaurant() {
         let screen = UIScreen.mainScreen().bounds.size

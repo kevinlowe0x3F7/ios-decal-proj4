@@ -13,7 +13,7 @@ class UserProfile: NSObject {
     /* List of saved restaurants. */
     var savedRestaurants: [Restaurant]!
     /* List of saved restaurants as a set to be able to quickly see if a restaurant is in the set or not. */
-    var savedRestaurantsSet: Set<Restaurant>!
+//    var savedRestaurantsSet: Set<Restaurant>!
     /* Their current location or location that they want to base their search off of. */
     var location: CLLocation!
     /* True if user wants to sort by distance, false otherwise. */
@@ -21,7 +21,7 @@ class UserProfile: NSObject {
     
     override init() {
         savedRestaurants = [Restaurant]()
-        savedRestaurantsSet = Set<Restaurant>()
+//        savedRestaurantsSet = Set<Restaurant>()
         location = nil
         sortByDistance = false
     }
@@ -33,10 +33,11 @@ class UserProfile: NSObject {
     func addRestaurant(restaurant: Restaurant) {
         print("adding restaurant to user")
         savedRestaurants.append(restaurant)
-        savedRestaurantsSet.insert(restaurant)
+//        savedRestaurantsSet.insert(restaurant)
     }
     
     func hasSaved(restaurant: Restaurant) -> Bool {
-        return savedRestaurantsSet.contains(restaurant)
+        return savedRestaurants.contains(restaurant)
     }
+    
 }
