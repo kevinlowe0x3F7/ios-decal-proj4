@@ -15,23 +15,11 @@ class BasicRestaurantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let screen = UIScreen.mainScreen().bounds.size
-        let viewWidth = screen.width
-        let viewHeight = screen.height
-        let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height
+        let myWebView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width,	UIScreen.mainScreen().bounds.height))
         
-        basicRestaurantView = BasicRestaurantView(frame: CGRectMake(0, viewY, viewWidth, viewHeight), restaurant: restaurant, delegate: self)
-        //addSubview is crucial!
-        self.view.addSubview(basicRestaurantView)
+        myWebView.loadRequest(NSURLRequest(URL: NSURL(string: restaurant.businessURL)!))
         
-        
-        basicRestaurantView.restaurantName.center.x = self.view.center.x
-        basicRestaurantView.imageView.center.x = self.view.center.x
-        basicRestaurantView.rating.center.x = self.view.center.x
-        basicRestaurantView.rating.center.y = self.view.center.y + 25
-//        basicRestaurantView.restaurantAddress.center.x = self.view.center.x
-        basicRestaurantView.restaurantPhoneNumber.center.x = self.view.center.x
-        basicRestaurantView.restaurantDistance.center.x = self.view.center.x
+        self.view.addSubview(myWebView)
 
 
         
