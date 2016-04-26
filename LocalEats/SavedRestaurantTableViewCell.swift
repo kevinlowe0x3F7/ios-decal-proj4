@@ -10,6 +10,8 @@ import UIKit
 
 class SavedRestaurantTableViewCell: UITableViewCell {
 
+    var restaurant : Restaurant!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

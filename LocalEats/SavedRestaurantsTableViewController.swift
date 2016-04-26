@@ -10,7 +10,6 @@ import UIKit
 
 class SavedRestaurantsTableViewController: UITableViewController {
 
-    var savedRestaurantsTableView: UITableView!
     var user : UserProfile!
     
     override func viewDidLoad() {
@@ -42,17 +41,25 @@ class SavedRestaurantsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell:SavedRestaurantTableViewCell = SavedRestaurantTableViewCell(style: .Default, reuseIdentifier: "SavedRestaurantTableViewCell")
+        let cell:SavedRestaurantTableViewCell = SavedRestaurantTableViewCell(style: .Default, reuseIdentifier: "SavedRestaurantTableViewCell")
         
 //        cell.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, 100)
         
         cell.textLabel?.text = self.user.savedRestaurants[indexPath.row].name
+        cell.restaurant = self.user.savedRestaurants[indexPath.row]
         print(cell.textLabel?.text)
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("You selected cell #\(indexPath.row)!")
+        
+        let vc = BasicRestaurantViewController()
+        let cell:SavedRestaurantTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! SavedRestaurantTableViewCell
+        
+        vc.restaurant = cell.restaurant
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 
     override func didReceiveMemoryWarning() {

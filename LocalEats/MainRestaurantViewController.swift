@@ -85,6 +85,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         userProfileBarButtonItem = UIBarButtonItem(title: "User Profile", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
         self.navigationItem.rightBarButtonItem = userProfileBarButtonItem
         
+        
     }
     
     func yesButtonTapped() {
