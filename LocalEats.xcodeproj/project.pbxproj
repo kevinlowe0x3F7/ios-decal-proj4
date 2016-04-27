@@ -22,6 +22,25 @@
 		2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */; };
 		2B4FDA261CD13A12003BA747 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4FDA251CD13A12003BA747 /* UIImage+Gif.swift */; };
 		2B4FDA461CD141D1003BA747 /* yelp_star.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2B4FDA451CD141D1003BA747 /* yelp_star.gif */; };
+		2BC064361CD1511000E23D9D /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064211CD1511000E23D9D /* Dictionary+OAuthSwift.swift */; };
+		2BC064371CD1511000E23D9D /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064221CD1511000E23D9D /* HMAC.swift */; };
+		2BC064391CD1511000E23D9D /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064241CD1511000E23D9D /* Int+OAuthSwift.swift */; };
+		2BC0643A1CD1511000E23D9D /* NSData+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064251CD1511000E23D9D /* NSData+OAuthSwift.swift */; };
+		2BC0643B1CD1511000E23D9D /* NSDate+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064261CD1511000E23D9D /* NSDate+OAuthSwift.swift */; };
+		2BC0643C1CD1511000E23D9D /* NSURL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064271CD1511000E23D9D /* NSURL+OAuthSwift.swift */; };
+		2BC0643D1CD1511000E23D9D /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064281CD1511000E23D9D /* OAuth1Swift.swift */; };
+		2BC0643E1CD1511000E23D9D /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064291CD1511000E23D9D /* OAuth2Swift.swift */; };
+		2BC0643F1CD1511000E23D9D /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0642B1CD1511000E23D9D /* OAuthSwift.swift */; };
+		2BC064401CD1511000E23D9D /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0642C1CD1511000E23D9D /* OAuthSwiftClient.swift */; };
+		2BC064411CD1511000E23D9D /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0642D1CD1511000E23D9D /* OAuthSwiftCredential.swift */; };
+		2BC064421CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0642E1CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift */; };
+		2BC064431CD1511000E23D9D /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC0642F1CD1511000E23D9D /* OAuthSwiftMultipartData.swift */; };
+		2BC064441CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064301CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift */; };
+		2BC064451CD1511000E23D9D /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064311CD1511000E23D9D /* OAuthWebViewController.swift */; };
+		2BC064461CD1511000E23D9D /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064321CD1511000E23D9D /* SHA1.swift */; };
+		2BC064471CD1511000E23D9D /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064331CD1511000E23D9D /* String+OAuthSwift.swift */; };
+		2BC064481CD1511000E23D9D /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064341CD1511000E23D9D /* UIApplication+OAuthSwift.swift */; };
+		2BC064491CD1511000E23D9D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064351CD1511000E23D9D /* Utils.swift */; };
 		2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */; };
 		2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */; };
 		2BEF13071CCBF17300F19FB6 /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF13061CCBF17300F19FB6 /* YelpAPIClient.swift */; };
@@ -79,6 +98,26 @@
 		2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2B4FDA251CD13A12003BA747 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		2B4FDA451CD141D1003BA747 /* yelp_star.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = yelp_star.gif; path = Assets.xcassets/yelp_star.gif; sourceTree = "<group>"; };
+		2BC064211CD1511000E23D9D /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064221CD1511000E23D9D /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		2BC064241CD1511000E23D9D /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064251CD1511000E23D9D /* NSData+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064261CD1511000E23D9D /* NSDate+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064271CD1511000E23D9D /* NSURL+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064281CD1511000E23D9D /* OAuth1Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
+		2BC064291CD1511000E23D9D /* OAuth2Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
+		2BC0642A1CD1511000E23D9D /* OAuthSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift.h; sourceTree = "<group>"; };
+		2BC0642B1CD1511000E23D9D /* OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
+		2BC0642C1CD1511000E23D9D /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
+		2BC0642D1CD1511000E23D9D /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
+		2BC0642E1CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
+		2BC0642F1CD1511000E23D9D /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
+		2BC064301CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
+		2BC064311CD1511000E23D9D /* OAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
+		2BC064321CD1511000E23D9D /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		2BC064331CD1511000E23D9D /* String+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064341CD1511000E23D9D /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
+		2BC064351CD1511000E23D9D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDraggableRestaurantView.swift; sourceTree = "<group>"; };
 		2BEF13061CCBF17300F19FB6 /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
@@ -113,6 +152,7 @@
 		2B14E8CE1CC715D6006EF784 = {
 			isa = PBXGroup;
 			children = (
+				2BC064201CD1511000E23D9D /* OAuthSwift */,
 				2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */,
 				2B14E8D91CC715D6006EF784 /* LocalEats */,
 				2B14E8F11CC715D6006EF784 /* LocalEatsTests */,
@@ -202,6 +242,33 @@
 				2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */,
 			);
 			name = YelpAPI;
+			sourceTree = "<group>";
+		};
+		2BC064201CD1511000E23D9D /* OAuthSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2BC064211CD1511000E23D9D /* Dictionary+OAuthSwift.swift */,
+				2BC064221CD1511000E23D9D /* HMAC.swift */,
+				2BC064241CD1511000E23D9D /* Int+OAuthSwift.swift */,
+				2BC064251CD1511000E23D9D /* NSData+OAuthSwift.swift */,
+				2BC064261CD1511000E23D9D /* NSDate+OAuthSwift.swift */,
+				2BC064271CD1511000E23D9D /* NSURL+OAuthSwift.swift */,
+				2BC064281CD1511000E23D9D /* OAuth1Swift.swift */,
+				2BC064291CD1511000E23D9D /* OAuth2Swift.swift */,
+				2BC0642A1CD1511000E23D9D /* OAuthSwift.h */,
+				2BC0642B1CD1511000E23D9D /* OAuthSwift.swift */,
+				2BC0642C1CD1511000E23D9D /* OAuthSwiftClient.swift */,
+				2BC0642D1CD1511000E23D9D /* OAuthSwiftCredential.swift */,
+				2BC0642F1CD1511000E23D9D /* OAuthSwiftMultipartData.swift */,
+				2BC064301CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift */,
+				2BC0642E1CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift */,
+				2BC064311CD1511000E23D9D /* OAuthWebViewController.swift */,
+				2BC064321CD1511000E23D9D /* SHA1.swift */,
+				2BC064331CD1511000E23D9D /* String+OAuthSwift.swift */,
+				2BC064341CD1511000E23D9D /* UIApplication+OAuthSwift.swift */,
+				2BC064351CD1511000E23D9D /* Utils.swift */,
+			);
+			path = OAuthSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +408,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC0643A1CD1511000E23D9D /* NSData+OAuthSwift.swift in Sources */,
 				2B2D5FBD1CC747A9008B6740 /* RestaurantList.swift in Sources */,
+				2BC064471CD1511000E23D9D /* String+OAuthSwift.swift in Sources */,
+				2BC064431CD1511000E23D9D /* OAuthSwiftMultipartData.swift in Sources */,
 				2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */,
+				2BC064491CD1511000E23D9D /* Utils.swift in Sources */,
+				2BC0643C1CD1511000E23D9D /* NSURL+OAuthSwift.swift in Sources */,
 				2B14E8DD1CC715D6006EF784 /* MainRestaurantViewController.swift in Sources */,
+				2BC0643F1CD1511000E23D9D /* OAuthSwift.swift in Sources */,
+				2BC064391CD1511000E23D9D /* Int+OAuthSwift.swift in Sources */,
 				2B4FDA261CD13A12003BA747 /* UIImage+Gif.swift in Sources */,
+				2BC0643D1CD1511000E23D9D /* OAuth1Swift.swift in Sources */,
 				2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */,
+				2BC064361CD1511000E23D9D /* Dictionary+OAuthSwift.swift in Sources */,
+				2BC064421CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift in Sources */,
+				2BC064371CD1511000E23D9D /* HMAC.swift in Sources */,
+				2BC064441CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift in Sources */,
 				2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */,
+				2BC0643B1CD1511000E23D9D /* NSDate+OAuthSwift.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */,
+				2BC064411CD1511000E23D9D /* OAuthSwiftCredential.swift in Sources */,
+				2BC064481CD1511000E23D9D /* UIApplication+OAuthSwift.swift in Sources */,
 				2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */,
+				2BC064451CD1511000E23D9D /* OAuthWebViewController.swift in Sources */,
 				2BEF13071CCBF17300F19FB6 /* YelpAPIClient.swift in Sources */,
+				2BC064461CD1511000E23D9D /* SHA1.swift in Sources */,
 				2B0406941CCFF13E00AFE6D2 /* OverlayView.swift in Sources */,
+				2BC0643E1CD1511000E23D9D /* OAuth2Swift.swift in Sources */,
+				2BC064401CD1511000E23D9D /* OAuthSwiftClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

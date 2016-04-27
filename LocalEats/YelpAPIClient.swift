@@ -6,8 +6,7 @@
 //
 //
 
-import Foundation
-import OAuthSwift
+import UIKit
 
 struct YelpAPIConsole {
     var consumerKey = "AoZGHotNS0uk0bfWl9uzNA"
