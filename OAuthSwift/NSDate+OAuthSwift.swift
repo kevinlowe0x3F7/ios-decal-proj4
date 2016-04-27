@@ -1,6 +1,6 @@
-import Foundation
+import UIKit
 
-extension NSDate: Comparable {}
+extension NSDate {}
 
 public func == (lhs: NSDate, rhs: NSDate) -> Bool {
     return lhs.isEqualToDate(rhs)
