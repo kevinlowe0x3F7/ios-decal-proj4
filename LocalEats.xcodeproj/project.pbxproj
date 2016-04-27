@@ -20,66 +20,6 @@
 		2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */; };
 		2B2D5FBD1CC747A9008B6740 /* RestaurantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FBC1CC747A9008B6740 /* RestaurantList.swift */; };
 		2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */; };
-		2BAE84F91CD1220F002A07C4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84AA1CD1220F002A07C4 /* .gitignore */; };
-		2BAE84FA1CD1220F002A07C4 /* ImportPaths.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84AC1CD1220F002A07C4 /* ImportPaths.png */; };
-		2BAE84FB1CD1220F002A07C4 /* OAuthSwift-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84AD1CD1220F002A07C4 /* OAuthSwift-icon.png */; };
-		2BAE84FC1CD1220F002A07C4 /* Services.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84AE1CD1220F002A07C4 /* Services.png */; };
-		2BAE84FD1CD1220F002A07C4 /* TwitterOAuth.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84AF1CD1220F002A07C4 /* TwitterOAuth.png */; };
-		2BAE84FE1CD1220F002A07C4 /* TwitterOAuthTokens.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84B01CD1220F002A07C4 /* TwitterOAuthTokens.png */; };
-		2BAE84FF1CD1220F002A07C4 /* URLSchemes.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84B11CD1220F002A07C4 /* URLSchemes.png */; };
-		2BAE85001CD1220F002A07C4 /* Build in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84B31CD1220F002A07C4 /* Build */; };
-		2BAE85011CD1220F002A07C4 /* CONTRIBUTING.md in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84B41CD1220F002A07C4 /* CONTRIBUTING.md */; };
-		2BAE85021CD1220F002A07C4 /* ISSUE_TEMPLATE.md in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84B51CD1220F002A07C4 /* ISSUE_TEMPLATE.md */; };
-		2BAE85031CD1220F002A07C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84B61CD1220F002A07C4 /* Launch Screen.storyboard */; };
-		2BAE85041CD1220F002A07C4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84B71CD1220F002A07C4 /* LICENSE */; };
-		2BAE85051CD1220F002A07C4 /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84B91CD1220F002A07C4 /* Dictionary+OAuthSwift.swift */; };
-		2BAE85061CD1220F002A07C4 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84BA1CD1220F002A07C4 /* HMAC.swift */; };
-		2BAE85071CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84BB1CD1220F002A07C4 /* Info.plist */; };
-		2BAE85081CD1220F002A07C4 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84BC1CD1220F002A07C4 /* Int+OAuthSwift.swift */; };
-		2BAE85091CD1220F002A07C4 /* NSData+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84BD1CD1220F002A07C4 /* NSData+OAuthSwift.swift */; };
-		2BAE850A1CD1220F002A07C4 /* NSDate+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84BE1CD1220F002A07C4 /* NSDate+OAuthSwift.swift */; };
-		2BAE850B1CD1220F002A07C4 /* NSURL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84BF1CD1220F002A07C4 /* NSURL+OAuthSwift.swift */; };
-		2BAE850C1CD1220F002A07C4 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C01CD1220F002A07C4 /* OAuth1Swift.swift */; };
-		2BAE850D1CD1220F002A07C4 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C11CD1220F002A07C4 /* OAuth2Swift.swift */; };
-		2BAE850E1CD1220F002A07C4 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C31CD1220F002A07C4 /* OAuthSwift.swift */; };
-		2BAE850F1CD1220F002A07C4 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C41CD1220F002A07C4 /* OAuthSwiftClient.swift */; };
-		2BAE85101CD1220F002A07C4 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C51CD1220F002A07C4 /* OAuthSwiftCredential.swift */; };
-		2BAE85111CD1220F002A07C4 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C61CD1220F002A07C4 /* OAuthSwiftHTTPRequest.swift */; };
-		2BAE85121CD1220F002A07C4 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C71CD1220F002A07C4 /* OAuthSwiftMultipartData.swift */; };
-		2BAE85131CD1220F002A07C4 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C81CD1220F002A07C4 /* OAuthSwiftURLHandlerType.swift */; };
-		2BAE85141CD1220F002A07C4 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84C91CD1220F002A07C4 /* OAuthWebViewController.swift */; };
-		2BAE85151CD1220F002A07C4 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84CA1CD1220F002A07C4 /* SHA1.swift */; };
-		2BAE85161CD1220F002A07C4 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84CB1CD1220F002A07C4 /* String+OAuthSwift.swift */; };
-		2BAE85171CD1220F002A07C4 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84CC1CD1220F002A07C4 /* UIApplication+OAuthSwift.swift */; };
-		2BAE85181CD1220F002A07C4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84CD1CD1220F002A07C4 /* Utils.swift */; };
-		2BAE85191CD1220F002A07C4 /* OAuthSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84CE1CD1220F002A07C4 /* OAuthSwift.podspec */; };
-		2BAE851A1CD1220F002A07C4 /* OAuthSwift.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84D21CD1220F002A07C4 /* OAuthSwift.xcworkspace */; };
-		2BAE851B1CD1220F002A07C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84D41CD1220F002A07C4 /* AppDelegate.swift */; };
-		2BAE851C1CD1220F002A07C4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84D51CD1220F002A07C4 /* Constants.swift */; };
-		2BAE851D1CD1220F002A07C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84D61CD1220F002A07C4 /* InfoPlist.strings */; };
-		2BAE851E1CD1220F002A07C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84D81CD1220F002A07C4 /* Images.xcassets */; };
-		2BAE851F1CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84D91CD1220F002A07C4 /* Info.plist */; };
-		2BAE85201CD1220F002A07C4 /* Services.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84DB1CD1220F002A07C4 /* Services.plist */; };
-		2BAE85211CD1220F002A07C4 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84DC1CD1220F002A07C4 /* Services.swift */; };
-		2BAE85221CD1220F002A07C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84DD1CD1220F002A07C4 /* ViewController.swift */; };
-		2BAE85231CD1220F002A07C4 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84DE1CD1220F002A07C4 /* WebViewController.swift */; };
-		2BAE85241CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84E01CD1220F002A07C4 /* Info.plist */; };
-		2BAE85251CD1220F002A07C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84E31CD1220F002A07C4 /* Main.storyboard */; };
-		2BAE85261CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84E51CD1220F002A07C4 /* Info.plist */; };
-		2BAE85271CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84E71CD1220F002A07C4 /* Info.plist */; };
-		2BAE85281CD1220F002A07C4 /* OAuth1SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84E81CD1220F002A07C4 /* OAuth1SwiftTests.swift */; };
-		2BAE85291CD1220F002A07C4 /* OAuth2SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84E91CD1220F002A07C4 /* OAuth2SwiftTests.swift */; };
-		2BAE852A1CD1220F002A07C4 /* OAuthSwiftClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84EA1CD1220F002A07C4 /* OAuthSwiftClientTests.swift */; };
-		2BAE852B1CD1220F002A07C4 /* OAuthSwiftRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84EB1CD1220F002A07C4 /* OAuthSwiftRequestTests.swift */; };
-		2BAE852C1CD1220F002A07C4 /* ServicesTest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84EC1CD1220F002A07C4 /* ServicesTest.plist */; };
-		2BAE852D1CD1220F002A07C4 /* ServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84ED1CD1220F002A07C4 /* ServicesTests.swift */; };
-		2BAE852E1CD1220F002A07C4 /* SignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84EE1CD1220F002A07C4 /* SignTests.swift */; };
-		2BAE852F1CD1220F002A07C4 /* TestOAuthSwiftURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84EF1CD1220F002A07C4 /* TestOAuthSwiftURLHandler.swift */; };
-		2BAE85301CD1220F002A07C4 /* TestServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84F01CD1220F002A07C4 /* TestServer.swift */; };
-		2BAE85311CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84F21CD1220F002A07C4 /* Info.plist */; };
-		2BAE85321CD1220F002A07C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84F51CD1220F002A07C4 /* Info.plist */; };
-		2BAE85331CD1220F002A07C4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2BAE84F71CD1220F002A07C4 /* Podfile */; };
-		2BAE85341CD1220F002A07C4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2BAE84F81CD1220F002A07C4 /* README.md */; };
 		2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */; };
 		2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */; };
 		2BEF13071CCBF17300F19FB6 /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF13061CCBF17300F19FB6 /* YelpAPIClient.swift */; };
@@ -99,55 +39,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2B14E8D61CC715D6006EF784;
 			remoteInfo = LocalEats;
-		};
-		2BAE853C1CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		2BAE853E1CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		2BAE85401CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftOSX;
-		};
-		2BAE85421CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftOSXDemo;
-		};
-		2BAE85441CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
-			remoteInfo = OAuthSwiftTVOS;
-		};
-		2BAE85461CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C40890C01C11B37000E3146A;
-			remoteInfo = OAuthSwiftWatchOS;
-		};
-		2BAE85481CD1220F002A07C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
-			remoteInfo = OAuthSwiftTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -184,72 +75,6 @@
 		2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPILoader.swift; sourceTree = "<group>"; };
 		2B2D5FBC1CC747A9008B6740 /* RestaurantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantList.swift; sourceTree = "<group>"; };
 		2B2D5FBE1CC747C6008B6740 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		2BAE84AA1CD1220F002A07C4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		2BAE84AC1CD1220F002A07C4 /* ImportPaths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ImportPaths.png; sourceTree = "<group>"; };
-		2BAE84AD1CD1220F002A07C4 /* OAuthSwift-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "OAuthSwift-icon.png"; sourceTree = "<group>"; };
-		2BAE84AE1CD1220F002A07C4 /* Services.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Services.png; sourceTree = "<group>"; };
-		2BAE84AF1CD1220F002A07C4 /* TwitterOAuth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterOAuth.png; sourceTree = "<group>"; };
-		2BAE84B01CD1220F002A07C4 /* TwitterOAuthTokens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterOAuthTokens.png; sourceTree = "<group>"; };
-		2BAE84B11CD1220F002A07C4 /* URLSchemes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = URLSchemes.png; sourceTree = "<group>"; };
-		2BAE84B31CD1220F002A07C4 /* Build */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Build; sourceTree = "<group>"; };
-		2BAE84B41CD1220F002A07C4 /* CONTRIBUTING.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
-		2BAE84B51CD1220F002A07C4 /* ISSUE_TEMPLATE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ISSUE_TEMPLATE.md; sourceTree = "<group>"; };
-		2BAE84B61CD1220F002A07C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		2BAE84B71CD1220F002A07C4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2BAE84B91CD1220F002A07C4 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84BA1CD1220F002A07C4 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
-		2BAE84BB1CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84BC1CD1220F002A07C4 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84BD1CD1220F002A07C4 /* NSData+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84BE1CD1220F002A07C4 /* NSDate+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84BF1CD1220F002A07C4 /* NSURL+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84C01CD1220F002A07C4 /* OAuth1Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
-		2BAE84C11CD1220F002A07C4 /* OAuth2Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
-		2BAE84C21CD1220F002A07C4 /* OAuthSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwift.h; sourceTree = "<group>"; };
-		2BAE84C31CD1220F002A07C4 /* OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
-		2BAE84C41CD1220F002A07C4 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
-		2BAE84C51CD1220F002A07C4 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
-		2BAE84C61CD1220F002A07C4 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
-		2BAE84C71CD1220F002A07C4 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
-		2BAE84C81CD1220F002A07C4 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
-		2BAE84C91CD1220F002A07C4 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
-		2BAE84CA1CD1220F002A07C4 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
-		2BAE84CB1CD1220F002A07C4 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84CC1CD1220F002A07C4 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
-		2BAE84CD1CD1220F002A07C4 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		2BAE84CE1CD1220F002A07C4 /* OAuthSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OAuthSwift.podspec; sourceTree = "<group>"; };
-		2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OAuthSwift.xcodeproj; sourceTree = "<group>"; };
-		2BAE84D21CD1220F002A07C4 /* OAuthSwift.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = OAuthSwift.xcworkspace; sourceTree = "<group>"; };
-		2BAE84D41CD1220F002A07C4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BAE84D51CD1220F002A07C4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		2BAE84D71CD1220F002A07C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2BAE84D81CD1220F002A07C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2BAE84D91CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84DA1CD1220F002A07C4 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2BAE84DB1CD1220F002A07C4 /* Services.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Services.plist; sourceTree = "<group>"; };
-		2BAE84DC1CD1220F002A07C4 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
-		2BAE84DD1CD1220F002A07C4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2BAE84DE1CD1220F002A07C4 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		2BAE84E01CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84E11CD1220F002A07C4 /* OAuthSwiftOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwiftOSX.h; sourceTree = "<group>"; };
-		2BAE84E41CD1220F002A07C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2BAE84E51CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84E71CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84E81CD1220F002A07C4 /* OAuth1SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1SwiftTests.swift; sourceTree = "<group>"; };
-		2BAE84E91CD1220F002A07C4 /* OAuth2SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2SwiftTests.swift; sourceTree = "<group>"; };
-		2BAE84EA1CD1220F002A07C4 /* OAuthSwiftClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClientTests.swift; sourceTree = "<group>"; };
-		2BAE84EB1CD1220F002A07C4 /* OAuthSwiftRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftRequestTests.swift; sourceTree = "<group>"; };
-		2BAE84EC1CD1220F002A07C4 /* ServicesTest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServicesTest.plist; sourceTree = "<group>"; };
-		2BAE84ED1CD1220F002A07C4 /* ServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTests.swift; sourceTree = "<group>"; };
-		2BAE84EE1CD1220F002A07C4 /* SignTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignTests.swift; sourceTree = "<group>"; };
-		2BAE84EF1CD1220F002A07C4 /* TestOAuthSwiftURLHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOAuthSwiftURLHandler.swift; sourceTree = "<group>"; };
-		2BAE84F01CD1220F002A07C4 /* TestServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestServer.swift; sourceTree = "<group>"; };
-		2BAE84F21CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84F31CD1220F002A07C4 /* OAuthSwiftTVOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwiftTVOS.h; sourceTree = "<group>"; };
-		2BAE84F51CD1220F002A07C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BAE84F61CD1220F002A07C4 /* OAuthSwiftWatchOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSwiftWatchOS.h; sourceTree = "<group>"; };
-		2BAE84F71CD1220F002A07C4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		2BAE84F81CD1220F002A07C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDraggableRestaurantView.swift; sourceTree = "<group>"; };
 		2BEF13061CCBF17300F19FB6 /* YelpAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
@@ -284,7 +109,6 @@
 		2B14E8CE1CC715D6006EF784 = {
 			isa = PBXGroup;
 			children = (
-				2BAE84A91CD1220F002A07C4 /* OAuthSwift */,
 				2B2D5FAA1CC73136008B6740 /* CoreLocation.framework */,
 				2B14E8D91CC715D6006EF784 /* LocalEats */,
 				2B14E8F11CC715D6006EF784 /* LocalEatsTests */,
@@ -372,164 +196,6 @@
 				2B2D5FB51CC73225008B6740 /* YelpAPILoader.swift */,
 			);
 			name = YelpAPI;
-			sourceTree = "<group>";
-		};
-		2BAE84A91CD1220F002A07C4 /* OAuthSwift */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84AA1CD1220F002A07C4 /* .gitignore */,
-				2BAE84AB1CD1220F002A07C4 /* Assets */,
-				2BAE84B21CD1220F002A07C4 /* Carthage */,
-				2BAE84B41CD1220F002A07C4 /* CONTRIBUTING.md */,
-				2BAE84B51CD1220F002A07C4 /* ISSUE_TEMPLATE.md */,
-				2BAE84B61CD1220F002A07C4 /* Launch Screen.storyboard */,
-				2BAE84B71CD1220F002A07C4 /* LICENSE */,
-				2BAE84B81CD1220F002A07C4 /* OAuthSwift */,
-				2BAE84CE1CD1220F002A07C4 /* OAuthSwift.podspec */,
-				2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */,
-				2BAE84D21CD1220F002A07C4 /* OAuthSwift.xcworkspace */,
-				2BAE84D31CD1220F002A07C4 /* OAuthSwiftDemo */,
-				2BAE84DF1CD1220F002A07C4 /* OAuthSwiftOSX */,
-				2BAE84E21CD1220F002A07C4 /* OAuthSwiftOSXDemo */,
-				2BAE84E61CD1220F002A07C4 /* OAuthSwiftTests */,
-				2BAE84F11CD1220F002A07C4 /* OAuthSwiftTVOS */,
-				2BAE84F41CD1220F002A07C4 /* OAuthSwiftWatchOS */,
-				2BAE84F71CD1220F002A07C4 /* Podfile */,
-				2BAE84F81CD1220F002A07C4 /* README.md */,
-			);
-			path = OAuthSwift;
-			sourceTree = "<group>";
-		};
-		2BAE84AB1CD1220F002A07C4 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84AC1CD1220F002A07C4 /* ImportPaths.png */,
-				2BAE84AD1CD1220F002A07C4 /* OAuthSwift-icon.png */,
-				2BAE84AE1CD1220F002A07C4 /* Services.png */,
-				2BAE84AF1CD1220F002A07C4 /* TwitterOAuth.png */,
-				2BAE84B01CD1220F002A07C4 /* TwitterOAuthTokens.png */,
-				2BAE84B11CD1220F002A07C4 /* URLSchemes.png */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		2BAE84B21CD1220F002A07C4 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84B31CD1220F002A07C4 /* Build */,
-			);
-			path = Carthage;
-			sourceTree = "<group>";
-		};
-		2BAE84B81CD1220F002A07C4 /* OAuthSwift */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84B91CD1220F002A07C4 /* Dictionary+OAuthSwift.swift */,
-				2BAE84BA1CD1220F002A07C4 /* HMAC.swift */,
-				2BAE84BB1CD1220F002A07C4 /* Info.plist */,
-				2BAE84BC1CD1220F002A07C4 /* Int+OAuthSwift.swift */,
-				2BAE84BD1CD1220F002A07C4 /* NSData+OAuthSwift.swift */,
-				2BAE84BE1CD1220F002A07C4 /* NSDate+OAuthSwift.swift */,
-				2BAE84BF1CD1220F002A07C4 /* NSURL+OAuthSwift.swift */,
-				2BAE84C01CD1220F002A07C4 /* OAuth1Swift.swift */,
-				2BAE84C11CD1220F002A07C4 /* OAuth2Swift.swift */,
-				2BAE84C21CD1220F002A07C4 /* OAuthSwift.h */,
-				2BAE84C31CD1220F002A07C4 /* OAuthSwift.swift */,
-				2BAE84C41CD1220F002A07C4 /* OAuthSwiftClient.swift */,
-				2BAE84C51CD1220F002A07C4 /* OAuthSwiftCredential.swift */,
-				2BAE84C61CD1220F002A07C4 /* OAuthSwiftHTTPRequest.swift */,
-				2BAE84C71CD1220F002A07C4 /* OAuthSwiftMultipartData.swift */,
-				2BAE84C81CD1220F002A07C4 /* OAuthSwiftURLHandlerType.swift */,
-				2BAE84C91CD1220F002A07C4 /* OAuthWebViewController.swift */,
-				2BAE84CA1CD1220F002A07C4 /* SHA1.swift */,
-				2BAE84CB1CD1220F002A07C4 /* String+OAuthSwift.swift */,
-				2BAE84CC1CD1220F002A07C4 /* UIApplication+OAuthSwift.swift */,
-				2BAE84CD1CD1220F002A07C4 /* Utils.swift */,
-			);
-			path = OAuthSwift;
-			sourceTree = "<group>";
-		};
-		2BAE84D01CD1220F002A07C4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE853D1CD1220F002A07C4 /* OAuthSwift.framework */,
-				2BAE853F1CD1220F002A07C4 /* OAuthSwiftDemo.app */,
-				2BAE85411CD1220F002A07C4 /* OAuthSwift.framework */,
-				2BAE85431CD1220F002A07C4 /* OAuthSwiftOSXDemo.app */,
-				2BAE85451CD1220F002A07C4 /* OAuthSwift.framework */,
-				2BAE85471CD1220F002A07C4 /* OAuthSwift.framework */,
-				2BAE85491CD1220F002A07C4 /* OAuthSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2BAE84D31CD1220F002A07C4 /* OAuthSwiftDemo */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84D41CD1220F002A07C4 /* AppDelegate.swift */,
-				2BAE84D51CD1220F002A07C4 /* Constants.swift */,
-				2BAE84D61CD1220F002A07C4 /* InfoPlist.strings */,
-				2BAE84D81CD1220F002A07C4 /* Images.xcassets */,
-				2BAE84D91CD1220F002A07C4 /* Info.plist */,
-				2BAE84DB1CD1220F002A07C4 /* Services.plist */,
-				2BAE84DC1CD1220F002A07C4 /* Services.swift */,
-				2BAE84DD1CD1220F002A07C4 /* ViewController.swift */,
-				2BAE84DE1CD1220F002A07C4 /* WebViewController.swift */,
-			);
-			path = OAuthSwiftDemo;
-			sourceTree = "<group>";
-		};
-		2BAE84DF1CD1220F002A07C4 /* OAuthSwiftOSX */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84E01CD1220F002A07C4 /* Info.plist */,
-				2BAE84E11CD1220F002A07C4 /* OAuthSwiftOSX.h */,
-			);
-			path = OAuthSwiftOSX;
-			sourceTree = "<group>";
-		};
-		2BAE84E21CD1220F002A07C4 /* OAuthSwiftOSXDemo */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84E31CD1220F002A07C4 /* Main.storyboard */,
-				2BAE84E51CD1220F002A07C4 /* Info.plist */,
-			);
-			path = OAuthSwiftOSXDemo;
-			sourceTree = "<group>";
-		};
-		2BAE84E61CD1220F002A07C4 /* OAuthSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84E71CD1220F002A07C4 /* Info.plist */,
-				2BAE84E81CD1220F002A07C4 /* OAuth1SwiftTests.swift */,
-				2BAE84E91CD1220F002A07C4 /* OAuth2SwiftTests.swift */,
-				2BAE84EA1CD1220F002A07C4 /* OAuthSwiftClientTests.swift */,
-				2BAE84EB1CD1220F002A07C4 /* OAuthSwiftRequestTests.swift */,
-				2BAE84EC1CD1220F002A07C4 /* ServicesTest.plist */,
-				2BAE84ED1CD1220F002A07C4 /* ServicesTests.swift */,
-				2BAE84EE1CD1220F002A07C4 /* SignTests.swift */,
-				2BAE84EF1CD1220F002A07C4 /* TestOAuthSwiftURLHandler.swift */,
-				2BAE84F01CD1220F002A07C4 /* TestServer.swift */,
-			);
-			path = OAuthSwiftTests;
-			sourceTree = "<group>";
-		};
-		2BAE84F11CD1220F002A07C4 /* OAuthSwiftTVOS */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84F21CD1220F002A07C4 /* Info.plist */,
-				2BAE84F31CD1220F002A07C4 /* OAuthSwiftTVOS.h */,
-			);
-			path = OAuthSwiftTVOS;
-			sourceTree = "<group>";
-		};
-		2BAE84F41CD1220F002A07C4 /* OAuthSwiftWatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				2BAE84F51CD1220F002A07C4 /* Info.plist */,
-				2BAE84F61CD1220F002A07C4 /* OAuthSwiftWatchOS.h */,
-			);
-			path = OAuthSwiftWatchOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -627,12 +293,6 @@
 			mainGroup = 2B14E8CE1CC715D6006EF784;
 			productRefGroup = 2B14E8D81CC715D6006EF784 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2BAE84D01CD1220F002A07C4 /* Products */;
-					ProjectRef = 2BAE84CF1CD1220F002A07C4 /* OAuthSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2B14E8D61CC715D6006EF784 /* LocalEats */,
@@ -642,91 +302,14 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		2BAE853D1CD1220F002A07C4 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 2BAE853C1CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE853F1CD1220F002A07C4 /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = 2BAE853E1CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE85411CD1220F002A07C4 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 2BAE85401CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE85431CD1220F002A07C4 /* OAuthSwiftOSXDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftOSXDemo.app;
-			remoteRef = 2BAE85421CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE85451CD1220F002A07C4 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 2BAE85441CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE85471CD1220F002A07C4 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 2BAE85461CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2BAE85491CD1220F002A07C4 /* OAuthSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OAuthSwiftTests.xctest;
-			remoteRef = 2BAE85481CD1220F002A07C4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		2B14E8D51CC715D6006EF784 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAE85201CD1220F002A07C4 /* Services.plist in Resources */,
-				2BAE85191CD1220F002A07C4 /* OAuthSwift.podspec in Resources */,
-				2BAE85001CD1220F002A07C4 /* Build in Resources */,
-				2BAE84F91CD1220F002A07C4 /* .gitignore in Resources */,
-				2BAE85041CD1220F002A07C4 /* LICENSE in Resources */,
-				2BAE85251CD1220F002A07C4 /* Main.storyboard in Resources */,
 				2B14E8E81CC715D6006EF784 /* LaunchScreen.storyboard in Resources */,
-				2BAE851D1CD1220F002A07C4 /* InfoPlist.strings in Resources */,
-				2BAE85271CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE84FB1CD1220F002A07C4 /* OAuthSwift-icon.png in Resources */,
 				2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */,
-				2BAE85261CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE85311CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE85071CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE851F1CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE851E1CD1220F002A07C4 /* Images.xcassets in Resources */,
-				2BAE84FE1CD1220F002A07C4 /* TwitterOAuthTokens.png in Resources */,
-				2BAE85031CD1220F002A07C4 /* Launch Screen.storyboard in Resources */,
-				2BAE84FA1CD1220F002A07C4 /* ImportPaths.png in Resources */,
-				2BAE84FF1CD1220F002A07C4 /* URLSchemes.png in Resources */,
-				2BAE85321CD1220F002A07C4 /* Info.plist in Resources */,
-				2BAE851A1CD1220F002A07C4 /* OAuthSwift.xcworkspace in Resources */,
-				2BAE852C1CD1220F002A07C4 /* ServicesTest.plist in Resources */,
-				2BAE84FC1CD1220F002A07C4 /* Services.png in Resources */,
 				2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */,
-				2BAE84FD1CD1220F002A07C4 /* TwitterOAuth.png in Resources */,
-				2BAE85331CD1220F002A07C4 /* Podfile in Resources */,
-				2BAE85241CD1220F002A07C4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,51 +334,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BAE850D1CD1220F002A07C4 /* OAuth2Swift.swift in Sources */,
-				2BAE852B1CD1220F002A07C4 /* OAuthSwiftRequestTests.swift in Sources */,
 				2B2D5FBD1CC747A9008B6740 /* RestaurantList.swift in Sources */,
-				2BAE852A1CD1220F002A07C4 /* OAuthSwiftClientTests.swift in Sources */,
-				2BAE85051CD1220F002A07C4 /* Dictionary+OAuthSwift.swift in Sources */,
-				2BAE850B1CD1220F002A07C4 /* NSURL+OAuthSwift.swift in Sources */,
-				2BAE85131CD1220F002A07C4 /* OAuthSwiftURLHandlerType.swift in Sources */,
 				2B2D5FB61CC73225008B6740 /* YelpAPILoader.swift in Sources */,
-				2BAE85281CD1220F002A07C4 /* OAuth1SwiftTests.swift in Sources */,
 				2B14E8DD1CC715D6006EF784 /* MainRestaurantViewController.swift in Sources */,
-				2BAE850F1CD1220F002A07C4 /* OAuthSwiftClient.swift in Sources */,
-				2BAE851B1CD1220F002A07C4 /* AppDelegate.swift in Sources */,
-				2BAE850A1CD1220F002A07C4 /* NSDate+OAuthSwift.swift in Sources */,
-				2BAE85161CD1220F002A07C4 /* String+OAuthSwift.swift in Sources */,
-				2BAE85101CD1220F002A07C4 /* OAuthSwiftCredential.swift in Sources */,
-				2BAE850E1CD1220F002A07C4 /* OAuthSwift.swift in Sources */,
-				2BAE852F1CD1220F002A07C4 /* TestOAuthSwiftURLHandler.swift in Sources */,
 				2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */,
-				2BAE85301CD1220F002A07C4 /* TestServer.swift in Sources */,
 				2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */,
-				2BAE85091CD1220F002A07C4 /* NSData+OAuthSwift.swift in Sources */,
-				2BAE85121CD1220F002A07C4 /* OAuthSwiftMultipartData.swift in Sources */,
-				2BAE85211CD1220F002A07C4 /* Services.swift in Sources */,
-				2BAE85011CD1220F002A07C4 /* CONTRIBUTING.md in Sources */,
-				2BAE85231CD1220F002A07C4 /* WebViewController.swift in Sources */,
-				2BAE852D1CD1220F002A07C4 /* ServicesTests.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
-				2BAE85171CD1220F002A07C4 /* UIApplication+OAuthSwift.swift in Sources */,
-				2BAE852E1CD1220F002A07C4 /* SignTests.swift in Sources */,
-				2BAE850C1CD1220F002A07C4 /* OAuth1Swift.swift in Sources */,
-				2BAE85151CD1220F002A07C4 /* SHA1.swift in Sources */,
-				2BAE85181CD1220F002A07C4 /* Utils.swift in Sources */,
-				2BAE851C1CD1220F002A07C4 /* Constants.swift in Sources */,
-				2BAE85221CD1220F002A07C4 /* ViewController.swift in Sources */,
 				2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */,
-				2BAE85021CD1220F002A07C4 /* ISSUE_TEMPLATE.md in Sources */,
 				2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */,
 				2BEF13071CCBF17300F19FB6 /* YelpAPIClient.swift in Sources */,
-				2BAE85081CD1220F002A07C4 /* Int+OAuthSwift.swift in Sources */,
-				2BAE85111CD1220F002A07C4 /* OAuthSwiftHTTPRequest.swift in Sources */,
-				2BAE85061CD1220F002A07C4 /* HMAC.swift in Sources */,
 				2B0406941CCFF13E00AFE6D2 /* OverlayView.swift in Sources */,
-				2BAE85341CD1220F002A07C4 /* README.md in Sources */,
-				2BAE85291CD1220F002A07C4 /* OAuth2SwiftTests.swift in Sources */,
-				2BAE85141CD1220F002A07C4 /* OAuthWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,23 +393,6 @@
 				2B14E8E71CC715D6006EF784 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		2BAE84D61CD1220F002A07C4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BAE84D71CD1220F002A07C4 /* en */,
-				2BAE84DA1CD1220F002A07C4 /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2BAE84E31CD1220F002A07C4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BAE84E41CD1220F002A07C4 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
