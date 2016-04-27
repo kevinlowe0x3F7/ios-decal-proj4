@@ -1,6 +1,0 @@
-framework module Pods_LocalEatsUITests {
-  umbrella header "Pods-LocalEatsUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
