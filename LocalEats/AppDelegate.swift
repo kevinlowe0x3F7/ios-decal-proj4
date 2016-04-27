@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav1.viewControllers = [mainView]
         self.window!.rootViewController = nav1
         self.window?.makeKeyAndVisible()
+        mainView.loadLaunchElements()
         return true
     }
 
