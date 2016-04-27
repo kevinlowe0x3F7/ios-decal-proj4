@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2B0406941CCFF13E00AFE6D2 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0406931CCFF13E00AFE6D2 /* OverlayView.swift */; };
-		2B0406991CCFF1C400AFE6D2 /* no_button_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0406951CCFF1C400AFE6D2 /* no_button_trans.png */; };
-		2B04069A1CCFF1C400AFE6D2 /* no_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0406961CCFF1C400AFE6D2 /* no_stamp_trans.png */; };
-		2B04069B1CCFF1C400AFE6D2 /* yes_button_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0406971CCFF1C400AFE6D2 /* yes_button_trans.png */; };
-		2B04069C1CCFF1C400AFE6D2 /* yes_stamp_trans.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B0406981CCFF1C400AFE6D2 /* yes_stamp_trans.png */; };
 		2B14E8DB1CC715D6006EF784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */; };
 		2B14E8DD1CC715D6006EF784 /* MainRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */; };
 		2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B14E8DE1CC715D6006EF784 /* Main.storyboard */; };
@@ -127,10 +123,6 @@
 
 /* Begin PBXFileReference section */
 		2B0406931CCFF13E00AFE6D2 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
-		2B0406951CCFF1C400AFE6D2 /* no_button_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_button_trans.png; path = Assets.xcassets/no_button_trans.png; sourceTree = "<group>"; };
-		2B0406961CCFF1C400AFE6D2 /* no_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_stamp_trans.png; path = Assets.xcassets/no_stamp_trans.png; sourceTree = "<group>"; };
-		2B0406971CCFF1C400AFE6D2 /* yes_button_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes_button_trans.png; path = Assets.xcassets/yes_button_trans.png; sourceTree = "<group>"; };
-		2B0406981CCFF1C400AFE6D2 /* yes_stamp_trans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yes_stamp_trans.png; path = Assets.xcassets/yes_stamp_trans.png; sourceTree = "<group>"; };
 		2B14E8D71CC715D6006EF784 /* LocalEats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B14E8DA1CC715D6006EF784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRestaurantViewController.swift; sourceTree = "<group>"; };
@@ -212,10 +204,6 @@
 				2B2D5FB31CC7314B008B6740 /* View */,
 				2B14E8DE1CC715D6006EF784 /* Main.storyboard */,
 				2B14E8E41CC715D6006EF784 /* Assets.xcassets */,
-				2B0406951CCFF1C400AFE6D2 /* no_button_trans.png */,
-				2B0406961CCFF1C400AFE6D2 /* no_stamp_trans.png */,
-				2B0406971CCFF1C400AFE6D2 /* yes_button_trans.png */,
-				2B0406981CCFF1C400AFE6D2 /* yes_stamp_trans.png */,
 				2B2D5FB41CC73154008B6740 /* Controller */,
 				2B14E8E61CC715D6006EF784 /* LaunchScreen.storyboard */,
 				2B14E8E91CC715D6006EF784 /* Info.plist */,
@@ -461,11 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B04069A1CCFF1C400AFE6D2 /* no_stamp_trans.png in Resources */,
 				2B14E8E81CC715D6006EF784 /* LaunchScreen.storyboard in Resources */,
-				2B04069C1CCFF1C400AFE6D2 /* yes_stamp_trans.png in Resources */,
-				2B04069B1CCFF1C400AFE6D2 /* yes_button_trans.png in Resources */,
-				2B0406991CCFF1C400AFE6D2 /* no_button_trans.png in Resources */,
 				2B14E8E51CC715D6006EF784 /* Assets.xcassets in Resources */,
 				2B14E8E01CC715D6006EF784 /* Main.storyboard in Resources */,
 			);
