@@ -138,9 +138,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func loadLaunchElements() {
         let screen = UIScreen.mainScreen().bounds.size
-        let viewWidth = screen.width - 50
+        let viewWidth = screen.width
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
-        loadingView = UIImageView(frame: CGRectMake(25, viewY, viewWidth, viewWidth))
+        loadingView = UIImageView(frame: CGRectMake(0, viewY, viewWidth, viewWidth))
         let yelpGif = UIImage.gifWithName("yelp_star")
         loadingView.image = yelpGif
         self.view.addSubview(loadingView)
