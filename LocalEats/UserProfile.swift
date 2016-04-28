@@ -40,4 +40,8 @@ class UserProfile: NSObject {
         return savedRestaurants.contains(restaurant)
     }
     
+    func saveContents() {
+        
+    }
+    
 }
