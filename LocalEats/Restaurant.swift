@@ -75,7 +75,7 @@ class Restaurant: NSObject {
         } else {
             address = nil
         }
-        if let businessURLOptional = info.valueForKey("url") {
+        if let businessURLOptional = info.valueForKey("mobile_url") {
             businessURL = businessURLOptional as! String
         } else {
             businessURL = nil
