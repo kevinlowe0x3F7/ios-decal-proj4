@@ -32,6 +32,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.navigationItem.title = "LocalEats"
         currentOffset = 0
         user = UserProfile()
+        user.grabUserContents()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.user = user
         loaded = false
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.presentSettings))

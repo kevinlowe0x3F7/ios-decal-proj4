@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         let nav1 = UINavigationController()
         let mainView = MainRestaurantViewController()
-        user = mainView.user
         nav1.viewControllers = [mainView]
         self.window!.rootViewController = nav1
         self.window?.makeKeyAndVisible()
