@@ -22,13 +22,19 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     var yesButton: UIButton!
     var noButton: UIButton!
     var userProfileBarButtonItem: UIBarButtonItem!
+    var loaded: Bool!
+    var loadingView: UIImageView!
+    var loadingLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 241/255, alpha: 1)
         self.navigationItem.title = "LocalEats"
         currentOffset = 0
         user = UserProfile()
+        loaded = false
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.presentSettings))
         
         addButtons()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,6 +45,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
             locationManager.requestWhenInUseAuthorization()
         }
         locationManager.requestLocation()
+    }
+    
+    func presentSettings() {
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,6 +118,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     
     func grabNextRestaurant() {
+        if !loaded {
+            loadingView.removeFromSuperview()
+            loadingLabel.removeFromSuperview()
+            loaded = true
+        }
         let screen = UIScreen.mainScreen().bounds.size
         let viewWidth = screen.width - 50
         let viewHeight = screen.height - (screen.height * 4 / 10) - 15
@@ -138,6 +152,22 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
             user.addRestaurant(restaurantToSave)
         }
         grabNextRestaurant()
+    }
+    
+    func loadLaunchElements() {
+        let screen = UIScreen.mainScreen().bounds.size
+        let viewWidth = screen.width
+        let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
+        loadingView = UIImageView(frame: CGRectMake(0, viewY, viewWidth, viewWidth))
+        let yelpGif = UIImage.gifWithName("yelp_star")
+        loadingView.image = yelpGif
+        self.view.addSubview(loadingView)
+        
+        loadingLabel = UILabel(frame: CGRectMake(0, viewY + viewWidth + 20, viewWidth, 40))
+        loadingLabel.font = UIFont(name: "Helvetica Neue", size: 25)
+        loadingLabel.textAlignment = NSTextAlignment.Center
+        loadingLabel.text = "Loading restaurants..."
+        self.view.addSubview(loadingLabel)
     }
     
 }

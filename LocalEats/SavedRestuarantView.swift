@@ -14,7 +14,7 @@ class SavedRestuarantView: UIView {
     var originalPoint = CGPoint()
     var xFromCenter = CGFloat()
     var yFromCenter = CGFloat()
-    var delegate: SavedRestaurantTableViewController!
+    var delegate: SavedRestaurantsTableViewController!
     
     /*
     // Only override drawRect: if you perform custom drawing.
