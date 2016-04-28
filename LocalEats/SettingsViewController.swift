@@ -16,6 +16,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     var enterLocationLabel : UILabel!
     var bestMatchLabel : UILabel!
     var locationLabel : UILabel!
+    var searchButton : UIButton!
     var mainViewController: MainRestaurantViewController?
     
     override func viewDidLoad() {
@@ -69,9 +70,16 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         locationTextField.delegate = self
         self.view.addSubview(locationTextField)
         
+        searchButton = UIButton(frame: CGRectMake(screen.width / 15, (1.2 * topFifthCenterY) + 60, 100, 30))
+        searchButton.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        searchButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        searchButton.setTitle("Search", forState: UIControlState.Normal)
+        searchButton.addTarget(self, action: "searchPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(searchButton)
+        
         sortSwitch = UISwitch(frame: CGRectMake(screen.width - 70, screen.height / 2 - 30, 0, 0))
-        sortSwitch.on = false
-        sortSwitch.addTarget(self, action: #selector(SettingsViewController.switchValueDidChange(_:)), forControlEvents: .ValueChanged)
+        sortSwitch.on = (self.mainViewController?.user.sortByDistance!)!
+        sortSwitch.addTarget(self, action: "switchValueDidChange:", forControlEvents: .ValueChanged)
         self.view.addSubview(sortSwitch)
         
         locationLabel = UILabel(frame: CGRectMake(20, (screen.height / 2) - 40, 200, 40))
@@ -92,5 +100,9 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         } else{
             self.mainViewController!.user.sortByDistance = false
         }
+    }
+    
+    func searchPressed() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }

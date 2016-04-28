@@ -18,6 +18,11 @@ class YelpAPILoader {
     init(vc: MainRestaurantViewController) {
         self.viewController = vc
     }
+    
+    func clearRestaurantList() {
+        list.restaurants = [Restaurant]()
+        list.currentIndex = 0
+    }
 
     /* Load the initial set of 20 restaurants with the offset as 0. */
     func loadRestaurants(location: CLLocation) {
@@ -56,7 +61,6 @@ class YelpAPILoader {
             let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
             list.updateRestaurants(feedDictionary)
             viewController.grabNextRestaurant()
-            print("finished creating list")
         } catch let error as NSError {
             print("ERROR: \(error.localizedDescription)")
         }

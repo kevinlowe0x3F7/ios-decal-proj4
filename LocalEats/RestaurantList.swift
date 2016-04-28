@@ -14,13 +14,12 @@ class RestaurantList: NSObject {
     var restaurants: [Restaurant]!
     /* The current restaurant that we are looking at. */
     var currentIndex: Int!
-    /* The current location that we are basing our restaurants off of. When this location
-    gets changed, we reset the list, the offset, and the location. */
-    var currentLocation: CLLocation!
+    /* Current location that this restaurant list's data is based off of. */
+    var location: CLLocation!
     
     override init() {
         currentIndex = 0
-        currentLocation = nil
+        location = nil
     }
     
     /* Returns the next restaurant in the list, or nil if there are no restaurants left. */
@@ -45,7 +44,8 @@ class RestaurantList: NSObject {
         }
     }
     
+    /* Update the current location. */
     func updateLocation(location: CLLocation) {
-        self.currentLocation = location
+        self.location = location
     }
 }

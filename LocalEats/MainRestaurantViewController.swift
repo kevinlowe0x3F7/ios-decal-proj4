@@ -92,13 +92,13 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         
         yesButton = UIButton(frame: CGRectMake(centerX + screen.width / 5, buttonY, buttonSize, buttonSize))
         yesButton.setImage(UIImage(named: "yes_button_trans.png"), forState: UIControlState.Normal)
-        yesButton.addTarget(self, action: #selector(MainRestaurantViewController.yesButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        yesButton.addTarget(self, action: "yesButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(yesButton)
         yesButton.alpha = 0
         
         noButton = UIButton(frame: CGRectMake(centerX - screen.width / 5, buttonY, buttonSize, buttonSize))
         noButton.setImage(UIImage(named: "no_button_trans.png"), forState: UIControlState.Normal)
-        noButton.addTarget(self, action: #selector(MainRestaurantViewController.noButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        noButton.addTarget(self, action: "noButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(noButton)
         noButton.alpha = 0
         
@@ -193,6 +193,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func getNewLocation(location: CLLocation) {
+        loader.clearRestaurantList()
         currentOffset = 0
         restaurantView.removeFromSuperview()
         yesButton.alpha = 0
