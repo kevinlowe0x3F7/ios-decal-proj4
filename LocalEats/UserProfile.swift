@@ -56,5 +56,4 @@ class UserProfile: NSObject {
             sortByDistance = prefs.boolForKey("sorting")
         }
     }
-    
 }

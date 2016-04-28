@@ -22,6 +22,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     var yesButton: UIButton!
     var noButton: UIButton!
     var userProfileBarButtonItem: UIBarButtonItem!
+    var settingsBarButtonItem: UIBarButtonItem!
     var loaded: Bool!
     var loadingView: UIImageView!
     var loadingLabel: UILabel!
@@ -37,8 +38,6 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         appDelegate.user = user
         loaded = false
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.presentSettings))
-        
         addButtons()
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
@@ -48,6 +47,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
             locationManager.requestWhenInUseAuthorization()
         }
         locationManager.requestLocation()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     func presentSettings() {
@@ -97,7 +101,8 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         userProfileBarButtonItem = UIBarButtonItem(title: "User Profile", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
         self.navigationItem.rightBarButtonItem = userProfileBarButtonItem
         
-        
+        settingsBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.settingsTapped))
+        self.navigationItem.leftBarButtonItem = settingsBarButtonItem
     }
     
     func yesButtonTapped() {
@@ -119,6 +124,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func settingsTapped() {
+        let vc = SettingsViewController()
+        vc.mainViewController = self
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func grabNextRestaurant() {
         if !loaded {
@@ -171,6 +181,13 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         loadingLabel.textAlignment = NSTextAlignment.Center
         loadingLabel.text = "Loading restaurants..."
         self.view.addSubview(loadingLabel)
+    }
+    
+    func getNewLocation(location: CLLocation) {
+        restaurantView.removeFromSuperview()
+        user.updateLocation(location)
+        locationForYelp = location
+        loader.loadRestaurants(location)
     }
     
 }

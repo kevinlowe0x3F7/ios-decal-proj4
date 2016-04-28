@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SavedRestuarantView: UIView {
+class SavedRestaurantView: UIView {
     var restaurant: Restaurant!
     var imageView: UIImageView!
     var originalPoint = CGPoint()
