@@ -59,7 +59,6 @@ class SavedRestaurantsTableViewController: UITableViewController {
         
         vc.restaurant = cell.restaurant
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
 
     override func didReceiveMemoryWarning() {

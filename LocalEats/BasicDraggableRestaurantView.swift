@@ -19,6 +19,7 @@ let ROTATION_ANGLE = CGFloat(M_PI/8) //Higher = stronger rotation angle
 
 class BasicDraggableRestaurantView: UIView {
     var panGestureRecognizer: UIPanGestureRecognizer!
+    var tapGestureRecognizer: UITapGestureRecognizer!
     var restaurant: Restaurant!
     var imageView: UIImageView!
     var originalPoint = CGPoint()
@@ -41,8 +42,10 @@ class BasicDraggableRestaurantView: UIView {
             imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
             imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: restaurantOptional.imageURL)!)!)
             self.addSubview(imageView)
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BasicDraggableRestaurantView.beingDragged(_:)))
+            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "beingDragged:")
             self.addGestureRecognizer(panGestureRecognizer)
+            tapGestureRecognizer = UITapGestureRecognizer(target: self.delegate, action: "beingTapped")
+            self.addGestureRecognizer(tapGestureRecognizer)
             setupLabels()
         } else {
             placeEmptyLabel()
