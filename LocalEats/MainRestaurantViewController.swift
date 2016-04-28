@@ -33,6 +33,8 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         user = UserProfile()
         loaded = false
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: "presentSettings")
+        
         addButtons()
         // Do any additional setup after loading the view, typically from a nib.
         loader = YelpAPILoader(vc: self)
@@ -42,6 +44,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
             locationManager.requestWhenInUseAuthorization()
         }
         locationManager.requestLocation()
+    }
+    
+    func presentSettings() {
     }
 
     override func didReceiveMemoryWarning() {
