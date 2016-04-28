@@ -35,6 +35,22 @@ class YelpAPILoader {
         client.searchPlacesWithParameters(parameters, successSearch: didLoadRestaurants, failureSearch: failedToLoadRestaurants)
     }
     
+    /* Load the initial set of 20 restaurants with the offset as 0 sorted by distance. */
+    func loadSortedRestaurants(location: CLLocation) {
+        list.updateLocation(location)
+        let parameters = ["term": "restaurants", "ll": "\(location.coordinate.latitude),\(location.coordinate.longitude)", "sort": "1"]
+        let client = YelpAPIClient()
+        client.searchPlacesWithParameters(parameters, successSearch: didLoadRestaurants, failureSearch: failedToLoadRestaurants)
+    }
+    
+    /* Load a set of 20 restaurants with a given offset sorted by distance. */
+    func loadSortedRestaurants(location: CLLocation, offset: Int) {
+        list.updateLocation(location)
+        let parameters = ["term": "restaurants", "offset": "\(offset)", "ll": "\(location.coordinate.latitude),\(location.coordinate.longitude)", "sort": "1"]
+        let client = YelpAPIClient()
+        client.searchPlacesWithParameters(parameters, successSearch: didLoadRestaurants, failureSearch: failedToLoadRestaurants)
+    }
+    
     func didLoadRestaurants(data: NSData, response: NSHTTPURLResponse) -> Void {
         do {
             let feedDictionary = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary

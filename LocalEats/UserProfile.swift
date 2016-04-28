@@ -32,6 +32,9 @@ class UserProfile: NSObject {
     }
     
     func hasSaved(restaurant: Restaurant) -> Bool {
+        if savedRestaurants.count == 0 {
+            return false
+        }
         for i in 0...savedRestaurants.count-1 {
             if (savedRestaurants[i] == restaurant) {
                 return true

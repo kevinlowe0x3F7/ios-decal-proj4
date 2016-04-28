@@ -75,7 +75,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationForYelp = locations[locations.count - 1]
         user.updateLocation(locationForYelp)
-        loader.loadRestaurants(locationForYelp)
+        if (user.sortByDistance != nil && user.sortByDistance) {
+            loader.loadSortedRestaurants(locationForYelp)
+        } else {
+            loader.loadRestaurants(locationForYelp)
+        }
         print("finished in locationManager method")
     }
     
@@ -152,7 +156,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             print("passed 20")
             currentOffset = currentOffset + 20
-            loader.loadRestaurants(locationForYelp, offset: currentOffset)
+            if (user.sortByDistance != nil && user.sortByDistance) {
+                loader.loadSortedRestaurants(locationForYelp, offset: currentOffset)
+            } else {
+                loader.loadRestaurants(locationForYelp, offset: currentOffset)
+            }
         }
     }
     
@@ -168,6 +176,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func loadLaunchElements() {
+        loaded = false
         let screen = UIScreen.mainScreen().bounds.size
         let viewWidth = screen.width
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
@@ -184,10 +193,18 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func getNewLocation(location: CLLocation) {
+        currentOffset = 0
         restaurantView.removeFromSuperview()
+        yesButton.alpha = 0
+        noButton.alpha = 0
         user.updateLocation(location)
         locationForYelp = location
-        loader.loadRestaurants(location)
+        loadLaunchElements()
+        if (user.sortByDistance != nil && user.sortByDistance) {
+            loader.loadSortedRestaurants(location)
+        } else {
+            loader.loadRestaurants(location)
+        }
     }
     
 }
