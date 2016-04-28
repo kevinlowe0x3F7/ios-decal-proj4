@@ -15,6 +15,8 @@ class SavedRestaurantsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 241/255, alpha: 1)
+
         tableView.registerClass(SavedRestaurantTableViewCell.self, forCellReuseIdentifier: "SavedRestaurantTableViewCell")
         tableView.reloadData()
 
@@ -35,7 +37,6 @@ class SavedRestaurantsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.user.savedRestaurants.count)
         return self.user.savedRestaurants.count
     }
     
@@ -47,13 +48,12 @@ class SavedRestaurantsTableViewController: UITableViewController {
         
         cell.textLabel?.text = self.user.savedRestaurants[indexPath.row].name
         cell.restaurant = self.user.savedRestaurants[indexPath.row]
-        print(cell.textLabel?.text)
+
+        cell.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 241/255, alpha: 1)
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(indexPath.row)!")
-        
         let vc = BasicRestaurantViewController()
         let cell:SavedRestaurantTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! SavedRestaurantTableViewCell
         

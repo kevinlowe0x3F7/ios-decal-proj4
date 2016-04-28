@@ -12,8 +12,6 @@ import CoreLocation
 class UserProfile: NSObject {
     /* List of saved restaurants. */
     var savedRestaurants: [Restaurant]!
-    /* List of saved restaurants as a set to be able to quickly see if a restaurant is in the set or not. */
-//    var savedRestaurantsSet: Set<Restaurant>!
     /* Their current location or location that they want to base their search off of. */
     var location: CLLocation!
     /* True if user wants to sort by distance, false otherwise. */
@@ -21,7 +19,6 @@ class UserProfile: NSObject {
     
     override init() {
         savedRestaurants = [Restaurant]()
-//        savedRestaurantsSet = Set<Restaurant>()
         location = nil
         sortByDistance = false
     }
@@ -31,13 +28,32 @@ class UserProfile: NSObject {
     }
     
     func addRestaurant(restaurant: Restaurant) {
-        print("adding restaurant to user")
         savedRestaurants.append(restaurant)
-//        savedRestaurantsSet.insert(restaurant)
     }
     
     func hasSaved(restaurant: Restaurant) -> Bool {
-        return savedRestaurants.contains(restaurant)
+        for i in 0...savedRestaurants.count-1 {
+            if (savedRestaurants[i] == restaurant) {
+                return true
+            }
+        }
+        return false
     }
     
+    func saveContents() {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        prefs.removePersistentDomainForName(NSBundle.mainBundle().bundleIdentifier!)
+        let encodedRestaurants = NSKeyedArchiver.archivedDataWithRootObject(savedRestaurants)
+        prefs.setObject(encodedRestaurants, forKey: "savedRestaurants")
+        
+        prefs.setBool(sortByDistance, forKey: "sorting")
+    }
+    
+    func grabUserContents() {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        if let restaurantData = prefs.objectForKey("savedRestaurants") as! NSData! {
+            savedRestaurants = NSKeyedUnarchiver.unarchiveObjectWithData(restaurantData) as! [Restaurant]
+            sortByDistance = prefs.boolForKey("sorting")
+        }
+    }
 }

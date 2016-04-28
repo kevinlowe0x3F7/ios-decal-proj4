@@ -12,7 +12,7 @@ func ==(lhs: Restaurant, rhs: Restaurant) -> Bool {
     return lhs.id == rhs.id
 }
 
-class Restaurant: NSObject {
+class Restaurant: NSObject, NSCoding {
     /* The restaurant's name. */
     var name: String!
     /* The restaurant's rating. */
@@ -36,6 +36,66 @@ class Restaurant: NSObject {
         get {
             return id.hashValue
         }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        if let name = aDecoder.decodeObjectForKey("name") as! String! {
+            self.name = name
+        } else {
+            self.name = nil
+        }
+        if let rating = aDecoder.decodeDoubleForKey("rating") as Double! {
+            self.rating = rating
+        } else {
+            self.rating = nil
+        }
+        if let ratingURL = aDecoder.decodeObjectForKey("ratingURL") as! String! {
+            self.ratingURL = ratingURL
+        } else {
+            self.ratingURL = nil
+        }
+        if let distance = aDecoder.decodeDoubleForKey("distance") as Double! {
+            self.distance = distance
+        } else {
+            self.distance = nil
+        }
+        if let imageURL = aDecoder.decodeObjectForKey("imageURL") as! String! {
+            self.imageURL = imageURL
+        } else {
+            self.imageURL = nil
+        }
+        if let phoneNumber = aDecoder.decodeObjectForKey("phoneNumber") as! String! {
+            self.phoneNumber = phoneNumber
+        } else {
+            self.phoneNumber = nil
+        }
+        if let address = aDecoder.decodeObjectForKey("address") as! [String]! {
+            self.address = address
+        } else {
+            self.address = nil
+        }
+        if let businessURL = aDecoder.decodeObjectForKey("businessURL") as! String! {
+            self.businessURL = businessURL
+        } else {
+            self.businessURL = nil
+        }
+        if let id = aDecoder.decodeObjectForKey("id") as! String! {
+            self.id = id
+        } else {
+            self.id = nil
+        }
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeDouble(rating, forKey: "rating")
+        aCoder.encodeObject(ratingURL, forKey: "ratingURL")
+        aCoder.encodeDouble(distance, forKey: "distance")
+        aCoder.encodeObject(imageURL, forKey: "imageURL")
+        aCoder.encodeObject(phoneNumber, forKey: "phoneNumber")
+        aCoder.encodeObject(address, forKey: "address")
+        aCoder.encodeObject(businessURL, forKey: "businessURL")
+        aCoder.encodeObject(id, forKey: "id")
     }
 
     init(info: NSDictionary) {

@@ -33,8 +33,10 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.navigationItem.title = "LocalEats"
         currentOffset = 0
         user = UserProfile()
+        user.grabUserContents()
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.user = user
         loaded = false
-    
         
         addButtons()
         // Do any additional setup after loading the view, typically from a nib.
@@ -101,8 +103,6 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         
         settingsBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.settingsTapped))
         self.navigationItem.leftBarButtonItem = settingsBarButtonItem
-
-        
     }
     
     func yesButtonTapped() {

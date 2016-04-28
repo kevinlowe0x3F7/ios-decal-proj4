@@ -43,6 +43,8 @@
 		2BC064481CD1511000E23D9D /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064341CD1511000E23D9D /* UIApplication+OAuthSwift.swift */; };
 		2BC064491CD1511000E23D9D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC064351CD1511000E23D9D /* Utils.swift */; };
 		2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */; };
+		2BDF900D1CD1B796002E42CC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF900B1CD1B796002E42CC /* SettingsView.swift */; };
+		2BDF900E1CD1B796002E42CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDF900C1CD1B796002E42CC /* SettingsViewController.swift */; };
 		2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */; };
 		D23B2E3F1CD197DF00869698 /* SavedRestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */; };
 		D23B2E401CD197DF00869698 /* SavedRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E3D1CD197DF00869698 /* SavedRestaurantTableViewCell.swift */; };
@@ -125,6 +127,8 @@
 		2BC064341CD1511000E23D9D /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
 		2BC064351CD1511000E23D9D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2BCF8B8E1CC7E2A800F424F2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2BDF900B1CD1B796002E42CC /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = LocalEats/SettingsView.swift; sourceTree = "<group>"; };
+		2BDF900C1CD1B796002E42CC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = LocalEats/SettingsViewController.swift; sourceTree = "<group>"; };
 		2BEF12E41CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDraggableRestaurantView.swift; sourceTree = "<group>"; };
 		D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedRestaurantsTableViewController.swift; path = LocalEats/SavedRestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		D23B2E3D1CD197DF00869698 /* SavedRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedRestaurantTableViewCell.swift; path = LocalEats/SavedRestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		2B14E8CE1CC715D6006EF784 = {
 			isa = PBXGroup;
 			children = (
+				2BDF900B1CD1B796002E42CC /* SettingsView.swift */,
+				2BDF900C1CD1B796002E42CC /* SettingsViewController.swift */,
 				D23B2E421CD1980600869698 /* BasicRestaurantView.swift */,
 				D23B2E431CD1980600869698 /* BasicRestaurantViewController.swift */,
 				D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */,
@@ -444,9 +450,11 @@
 				D23B2E3F1CD197DF00869698 /* SavedRestaurantsTableViewController.swift in Sources */,
 				2BC064441CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift in Sources */,
 				2B4C4BE71CD1672800466363 /* YelpAPIClient.swift in Sources */,
+				2BDF900D1CD1B796002E42CC /* SettingsView.swift in Sources */,
 				2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */,
 				2BC0643B1CD1511000E23D9D /* NSDate+OAuthSwift.swift in Sources */,
 				D23B2E451CD1980600869698 /* BasicRestaurantViewController.swift in Sources */,
+				2BDF900E1CD1B796002E42CC /* SettingsViewController.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */,
 				2BC064411CD1511000E23D9D /* OAuthSwiftCredential.swift in Sources */,
