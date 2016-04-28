@@ -209,7 +209,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func beingTapped() {
-        let vc = BasicRestaurantViewController()
+        let vc = DetailedRestaurantViewController()
         vc.restaurant = self.restaurantView.restaurant
         self.navigationController?.pushViewController(vc, animated: true)
     }

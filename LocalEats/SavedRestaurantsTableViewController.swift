@@ -54,7 +54,7 @@ class SavedRestaurantsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let vc = BasicRestaurantViewController()
+        let vc = DetailedRestaurantViewController()
         let cell:SavedRestaurantTableViewCell = tableView.cellForRowAtIndexPath(indexPath) as! SavedRestaurantTableViewCell
         
         vc.restaurant = cell.restaurant

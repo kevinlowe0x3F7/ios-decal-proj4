@@ -49,8 +49,8 @@
 		D23B2E3F1CD197DF00869698 /* SavedRestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */; };
 		D23B2E401CD197DF00869698 /* SavedRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E3D1CD197DF00869698 /* SavedRestaurantTableViewCell.swift */; };
 		D23B2E411CD197DF00869698 /* SavedRestuarantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E3E1CD197DF00869698 /* SavedRestuarantView.swift */; };
-		D23B2E441CD1980600869698 /* BasicRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E421CD1980600869698 /* BasicRestaurantView.swift */; };
-		D23B2E451CD1980600869698 /* BasicRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E431CD1980600869698 /* BasicRestaurantViewController.swift */; };
+		D23B2E441CD1980600869698 /* DetailedRestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E421CD1980600869698 /* DetailedRestaurantView.swift */; };
+		D23B2E451CD1980600869698 /* DetailedRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23B2E431CD1980600869698 /* DetailedRestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +133,8 @@
 		D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		D23B2E3D1CD197DF00869698 /* SavedRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		D23B2E3E1CD197DF00869698 /* SavedRestuarantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedRestuarantView.swift; sourceTree = "<group>"; };
-		D23B2E421CD1980600869698 /* BasicRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRestaurantView.swift; sourceTree = "<group>"; };
-		D23B2E431CD1980600869698 /* BasicRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicRestaurantViewController.swift; sourceTree = "<group>"; };
+		D23B2E421CD1980600869698 /* DetailedRestaurantView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedRestaurantView.swift; sourceTree = "<group>"; };
+		D23B2E431CD1980600869698 /* DetailedRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedRestaurantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +238,7 @@
 				2B4FDA251CD13A12003BA747 /* UIImage+Gif.swift */,
 				D23B2E3E1CD197DF00869698 /* SavedRestuarantView.swift */,
 				D23B2E3D1CD197DF00869698 /* SavedRestaurantTableViewCell.swift */,
-				D23B2E421CD1980600869698 /* BasicRestaurantView.swift */,
+				D23B2E421CD1980600869698 /* DetailedRestaurantView.swift */,
 				2BDF900B1CD1B796002E42CC /* SettingsView.swift */,
 				2B4FDA451CD141D1003BA747 /* yelp_star.gif */,
 			);
@@ -251,7 +251,7 @@
 				2B14E8DC1CC715D6006EF784 /* MainRestaurantViewController.swift */,
 				2BDF900C1CD1B796002E42CC /* SettingsViewController.swift */,
 				D23B2E3C1CD197DF00869698 /* SavedRestaurantsTableViewController.swift */,
-				D23B2E431CD1980600869698 /* BasicRestaurantViewController.swift */,
+				D23B2E431CD1980600869698 /* DetailedRestaurantViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 				2B2D5FBF1CC747C6008B6740 /* Restaurant.swift in Sources */,
 				2BC064361CD1511000E23D9D /* Dictionary+OAuthSwift.swift in Sources */,
 				2BC064421CD1511000E23D9D /* OAuthSwiftHTTPRequest.swift in Sources */,
-				D23B2E441CD1980600869698 /* BasicRestaurantView.swift in Sources */,
+				D23B2E441CD1980600869698 /* DetailedRestaurantView.swift in Sources */,
 				2BC064371CD1511000E23D9D /* HMAC.swift in Sources */,
 				D23B2E3F1CD197DF00869698 /* SavedRestaurantsTableViewController.swift in Sources */,
 				2BC064441CD1511000E23D9D /* OAuthSwiftURLHandlerType.swift in Sources */,
@@ -453,7 +453,7 @@
 				2BDF900D1CD1B796002E42CC /* SettingsView.swift in Sources */,
 				2BCF8B8F1CC7E2A800F424F2 /* UserProfile.swift in Sources */,
 				2BC0643B1CD1511000E23D9D /* NSDate+OAuthSwift.swift in Sources */,
-				D23B2E451CD1980600869698 /* BasicRestaurantViewController.swift in Sources */,
+				D23B2E451CD1980600869698 /* DetailedRestaurantViewController.swift in Sources */,
 				2BDF900E1CD1B796002E42CC /* SettingsViewController.swift in Sources */,
 				2B14E8E31CC715D6006EF784 /* LocalEats.xcdatamodeld in Sources */,
 				2BEF12E51CC83DD000F19FB6 /* BasicDraggableRestaurantView.swift in Sources */,

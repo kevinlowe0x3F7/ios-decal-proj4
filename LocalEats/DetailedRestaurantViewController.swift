@@ -8,9 +8,9 @@
 
 import UIKit
 
-class BasicRestaurantViewController: UIViewController {
+class DetailedRestaurantViewController: UIViewController {
 
-    var basicRestaurantView : BasicRestaurantView!
+    var detailedRestaurantView : DetailedRestaurantView!
     var restaurant : Restaurant!
     
     override func viewDidLoad() {

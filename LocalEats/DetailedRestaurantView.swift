@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicRestaurantView: UIView {
+class DetailedRestaurantView: UIView {
     
     
     
