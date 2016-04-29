@@ -58,7 +58,7 @@ class BasicDraggableRestaurantView: UIView {
         let imageY = 25 + frame.width - 50
         let nameSize = CGFloat(30)
         if let restaurantName = restaurant.name {
-            let name: UILabel = UILabel(frame: CGRectMake(0, imageY + 5, frame.width, nameSize))
+            let name: UILabel = UILabel(frame: CGRectMake(7, imageY + 5, frame.width - 14, nameSize))
             name.textAlignment = NSTextAlignment.Center
             name.font = UIFont(name: "Helvetica Neue", size: 22)
             name.text = "\(restaurantName)"

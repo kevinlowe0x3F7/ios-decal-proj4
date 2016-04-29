@@ -6,7 +6,8 @@
 //  Copyright © 2016 Kevin Lowe. All rights reserved.
 //
 //  red button: http://images.all-free-download.com/images/graphiclarge/round_red_x_sign_4229.jpg
-//  green button: hhttp://cliparts.co/cliparts/kcK/B8p/kcKB8pagi.jpg
+//  green button: http://cliparts.co/cliparts/kcK/B8p/kcKB8pagi.jpg
+//  yelp loading gif: https://d13yacurqjgara.cloudfront.net/users/145494/screenshots/2053367/yelp-star-animation.gif
 
 import UIKit
 import CoreLocation
@@ -102,7 +103,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.view.addSubview(noButton)
         noButton.alpha = 0
         
-        userProfileBarButtonItem = UIBarButtonItem(title: "User Profile", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
+        userProfileBarButtonItem = UIBarButtonItem(title: "Likes", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
         self.navigationItem.rightBarButtonItem = userProfileBarButtonItem
         
         settingsBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.settingsTapped))
