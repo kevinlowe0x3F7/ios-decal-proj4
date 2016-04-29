@@ -65,6 +65,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error while updating location " + error.localizedDescription)
+        errorForCoreLocation()
     }
 
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -156,7 +157,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             print("passed 20")
             currentOffset = currentOffset + 20
-            if (user.sortByDistance != nil && user.sortByDistance) {
+            if currentOffset >= 1000 {
+                outOfRestaurants()
+            } else if (user.sortByDistance != nil && user.sortByDistance) {
                 loader.loadSortedRestaurants(locationForYelp, offset: currentOffset)
             } else {
                 loader.loadRestaurants(locationForYelp, offset: currentOffset)
@@ -195,7 +198,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     func getNewLocation(location: CLLocation) {
         loader.clearRestaurantList()
         currentOffset = 0
-        restaurantView.removeFromSuperview()
+        if let restaurantViewOptional = restaurantView {
+            restaurantViewOptional.removeFromSuperview()
+        }
         yesButton.alpha = 0
         noButton.alpha = 0
         user.updateLocation(location)
@@ -212,6 +217,36 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         let vc = DetailedRestaurantViewController()
         vc.restaurant = self.restaurantView.restaurant
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func errorForNewLocation() {
+        let alertController = UIAlertController(title: "Error", message: "Location not found, please try a different location", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func errorForCoreLocation() {
+        let alertController = UIAlertController(title: "Error with current location", message: "Unable to load restaurants for current location, please enable Location Services", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func outOfRestaurants() {
+        let alertController = UIAlertController(title: "Out of Restaurants!", message: "Try a different location", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
     }
     
 }

@@ -41,6 +41,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
                 if((error) != nil){
                     print("Error", error)
+                    self.mainViewController!.errorForNewLocation()
                 }
                 if let placemark = placemarks?.first {
                     let location = placemark.location
