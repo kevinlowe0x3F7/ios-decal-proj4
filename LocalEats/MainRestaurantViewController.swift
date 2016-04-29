@@ -81,7 +81,6 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             loader.loadRestaurants(locationForYelp)
         }
-        print("finished in locationManager method")
     }
     
     func addButtons() {
