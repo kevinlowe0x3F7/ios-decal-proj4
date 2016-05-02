@@ -52,9 +52,9 @@ class BasicDraggableRestaurantView: UIView {
                 self.addSubview(emptyImageLabel)
             }
             self.addSubview(imageView)
-            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "beingDragged:")
+            panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(BasicDraggableRestaurantView.beingDragged(_:)))
             self.addGestureRecognizer(panGestureRecognizer)
-            tapGestureRecognizer = UITapGestureRecognizer(target: self.delegate, action: "beingTapped")
+            tapGestureRecognizer = UITapGestureRecognizer(target: self.delegate, action: Selector("beingTapped"))
             self.addGestureRecognizer(tapGestureRecognizer)
             setupLabels()
         } else {
