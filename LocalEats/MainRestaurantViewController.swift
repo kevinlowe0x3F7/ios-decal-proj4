@@ -205,7 +205,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         noButton.alpha = 0
         user.updateLocation(location)
         locationForYelp = location
-        loadLaunchElements()
+        if (self.loaded != nil && self.loaded) {
+            loadLaunchElements()
+        }
         if (user.sortByDistance != nil && user.sortByDistance) {
             loader.loadSortedRestaurants(location)
         } else {
