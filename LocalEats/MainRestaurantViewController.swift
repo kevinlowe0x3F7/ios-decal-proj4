@@ -6,7 +6,8 @@
 //  Copyright © 2016 Kevin Lowe. All rights reserved.
 //
 //  red button: http://images.all-free-download.com/images/graphiclarge/round_red_x_sign_4229.jpg
-//  green button: hhttp://cliparts.co/cliparts/kcK/B8p/kcKB8pagi.jpg
+//  green button: http://cliparts.co/cliparts/kcK/B8p/kcKB8pagi.jpg
+//  yelp loading gif: https://d13yacurqjgara.cloudfront.net/users/145494/screenshots/2053367/yelp-star-animation.gif
 
 import UIKit
 import CoreLocation
@@ -64,6 +65,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Error while updating location " + error.localizedDescription)
+        errorForCoreLocation()
     }
 
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -80,7 +82,6 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             loader.loadRestaurants(locationForYelp)
         }
-        print("finished in locationManager method")
     }
     
     func addButtons() {
@@ -102,7 +103,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         self.view.addSubview(noButton)
         noButton.alpha = 0
         
-        userProfileBarButtonItem = UIBarButtonItem(title: "User Profile", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
+        userProfileBarButtonItem = UIBarButtonItem(title: "Likes", style: .Plain, target: self, action: #selector(MainRestaurantViewController.userProfileTapped))
         self.navigationItem.rightBarButtonItem = userProfileBarButtonItem
         
         settingsBarButtonItem = UIBarButtonItem(title: "Settings", style: .Plain, target: self, action: #selector(MainRestaurantViewController.settingsTapped))
@@ -156,7 +157,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             print("passed 20")
             currentOffset = currentOffset + 20
-            if (user.sortByDistance != nil && user.sortByDistance) {
+            if currentOffset >= 1000 {
+                outOfRestaurants()
+            } else if (user.sortByDistance != nil && user.sortByDistance) {
                 loader.loadSortedRestaurants(locationForYelp, offset: currentOffset)
             } else {
                 loader.loadRestaurants(locationForYelp, offset: currentOffset)
@@ -195,7 +198,9 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     func getNewLocation(location: CLLocation) {
         loader.clearRestaurantList()
         currentOffset = 0
-        restaurantView.removeFromSuperview()
+        if let restaurantViewOptional = restaurantView {
+            restaurantViewOptional.removeFromSuperview()
+        }
         yesButton.alpha = 0
         noButton.alpha = 0
         user.updateLocation(location)
@@ -209,9 +214,39 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func beingTapped() {
-        let vc = BasicRestaurantViewController()
+        let vc = DetailedRestaurantViewController()
         vc.restaurant = self.restaurantView.restaurant
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func errorForNewLocation() {
+        let alertController = UIAlertController(title: "Error", message: "Location not found, please try a different location", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func errorForCoreLocation() {
+        let alertController = UIAlertController(title: "Error with current location", message: "Unable to load restaurants for current location, please enable Location Services", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func outOfRestaurants() {
+        let alertController = UIAlertController(title: "Out of Restaurants!", message: "Try a different location", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction) in
+        }
+        
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion:nil)
     }
     
 }

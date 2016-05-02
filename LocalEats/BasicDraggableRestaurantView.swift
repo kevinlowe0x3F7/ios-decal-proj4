@@ -40,7 +40,17 @@ class BasicDraggableRestaurantView: UIView {
         if let restaurantOptional = self.restaurant {
             let imageSize = viewSize.width - 50
             imageView = UIImageView(frame: CGRectMake(25, 25, imageSize, imageSize))
-            imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: restaurantOptional.imageURL)!)!)
+            if let imageAsURL = restaurantOptional.imageURL {
+                imageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: imageAsURL)!)!)
+            } else {
+                let frame = self.frame.size
+                let imageY = frame.width / 2 - 25
+                let emptyImageLabel: UILabel = UILabel(frame: CGRectMake(7, imageY, frame.width - 14, 30))
+                emptyImageLabel.textAlignment = NSTextAlignment.Center
+                emptyImageLabel.font = UIFont(name: "Helvetica Neue", size: 20)
+                emptyImageLabel.text = "No image available!"
+                self.addSubview(emptyImageLabel)
+            }
             self.addSubview(imageView)
             panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "beingDragged:")
             self.addGestureRecognizer(panGestureRecognizer)
@@ -58,7 +68,7 @@ class BasicDraggableRestaurantView: UIView {
         let imageY = 25 + frame.width - 50
         let nameSize = CGFloat(30)
         if let restaurantName = restaurant.name {
-            let name: UILabel = UILabel(frame: CGRectMake(0, imageY + 5, frame.width, nameSize))
+            let name: UILabel = UILabel(frame: CGRectMake(7, imageY + 5, frame.width - 14, nameSize))
             name.textAlignment = NSTextAlignment.Center
             name.font = UIFont(name: "Helvetica Neue", size: 22)
             name.text = "\(restaurantName)"

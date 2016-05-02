@@ -41,6 +41,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
                 if((error) != nil){
                     print("Error", error)
+                    self.mainViewController!.errorForNewLocation()
                 }
                 if let placemark = placemarks?.first {
                     let location = placemark.location
@@ -58,7 +59,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         enterLocationLabel.text = "Custom Location"
         self.view.addSubview(enterLocationLabel)
         
-        locationTextField = UITextField(frame: CGRectMake(screen.width / 15, (1.2*topFifthCenterY), 300, 40))
+        locationTextField = UITextField(frame: CGRectMake(screen.width / 15, (1.2*topFifthCenterY), screen.width * 4 / 5, 40))
         locationTextField.placeholder = "Enter location here"
         locationTextField.font = UIFont.systemFontOfSize(15)
         locationTextField.borderStyle = UITextBorderStyle.RoundedRect

@@ -41,12 +41,9 @@ their profile and see the restaurants in a saved list.
 ### View
 * MainRestaurantView
     * Main screen which presents the restaurants one by one
-* SavedRestaurantView
-    * Profile table view which presents the user with the
-    restaurants that they have saved
 * SettingsView
-    * Settings for user to toggle options, such as to give a location,
-    sort them, etc.
+    * Settings for user to toggle options, such as to give a location
+    and sort restaurants by distance.
 * BasicDraggableRestaurantView
     * A subview contained within the main restaurant view. Holds basic
     information for some restaurant. In other words, presents a basic
@@ -78,6 +75,6 @@ their profile and see the restaurants in a saved list.
 
 ## Credits
 * OAuthSwift for abstraction of OAuth process
-* YelpItOff for Yelp API requests using OAuthSwigt
+* YelpItOff for Yelp API requests using OAuthSwift
 * SwiftTinderCards for guidance on Tinder swipe animation effect
 
