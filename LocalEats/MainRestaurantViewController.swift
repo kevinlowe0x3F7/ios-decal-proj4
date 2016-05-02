@@ -75,7 +75,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         locationForYelp = locations[locations.count - 1]
         user.updateLocation(locationForYelp)
-        loader.loadRestaurants(locationForYelp)
+        if (user.sortByDistance != nil && user.sortByDistance) {
+            loader.loadSortedRestaurants(locationForYelp)
+        } else {
+            loader.loadRestaurants(locationForYelp)
+        }
         print("finished in locationManager method")
     }
     
@@ -88,13 +92,13 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         
         yesButton = UIButton(frame: CGRectMake(centerX + screen.width / 5, buttonY, buttonSize, buttonSize))
         yesButton.setImage(UIImage(named: "yes_button_trans.png"), forState: UIControlState.Normal)
-        yesButton.addTarget(self, action: #selector(MainRestaurantViewController.yesButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        yesButton.addTarget(self, action: "yesButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(yesButton)
         yesButton.alpha = 0
         
         noButton = UIButton(frame: CGRectMake(centerX - screen.width / 5, buttonY, buttonSize, buttonSize))
         noButton.setImage(UIImage(named: "no_button_trans.png"), forState: UIControlState.Normal)
-        noButton.addTarget(self, action: #selector(MainRestaurantViewController.noButtonTapped), forControlEvents: UIControlEvents.TouchUpInside)
+        noButton.addTarget(self, action: "noButtonTapped", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(noButton)
         noButton.alpha = 0
         
@@ -152,7 +156,11 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
         } else {
             print("passed 20")
             currentOffset = currentOffset + 20
-            loader.loadRestaurants(locationForYelp, offset: currentOffset)
+            if (user.sortByDistance != nil && user.sortByDistance) {
+                loader.loadSortedRestaurants(locationForYelp, offset: currentOffset)
+            } else {
+                loader.loadRestaurants(locationForYelp, offset: currentOffset)
+            }
         }
     }
     
@@ -168,6 +176,7 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func loadLaunchElements() {
+        loaded = false
         let screen = UIScreen.mainScreen().bounds.size
         let viewWidth = screen.width
         let viewY = (self.navigationController?.navigationBar.frame.size.height)! + UIApplication.sharedApplication().statusBarFrame.size.height + 25
@@ -184,10 +193,25 @@ class MainRestaurantViewController: UIViewController, CLLocationManagerDelegate 
     }
     
     func getNewLocation(location: CLLocation) {
+        loader.clearRestaurantList()
+        currentOffset = 0
         restaurantView.removeFromSuperview()
+        yesButton.alpha = 0
+        noButton.alpha = 0
         user.updateLocation(location)
         locationForYelp = location
-        loader.loadRestaurants(location)
+        loadLaunchElements()
+        if (user.sortByDistance != nil && user.sortByDistance) {
+            loader.loadSortedRestaurants(location)
+        } else {
+            loader.loadRestaurants(location)
+        }
+    }
+    
+    func beingTapped() {
+        let vc = BasicRestaurantViewController()
+        vc.restaurant = self.restaurantView.restaurant
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }

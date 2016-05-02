@@ -9,13 +9,14 @@
 import UIKit
 import MapKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     var sortSwitch : UISwitch!
     var locationTextField : UITextField!
     var enterLocationLabel : UILabel!
     var bestMatchLabel : UILabel!
     var locationLabel : UILabel!
+    var searchButton : UIButton!
     var mainViewController: MainRestaurantViewController?
     
     override func viewDidLoad() {
@@ -36,17 +37,17 @@ class SettingsViewController: UIViewController {
         
         let geocoder = CLGeocoder()
         let address = self.locationTextField.text!
-        
-        geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
-            if((error) != nil){
-                print("Error", error)
-            }
-            if let placemark = placemarks?.first {
-                let location = placemark.location
-                self.mainViewController!.getNewLocation(location!)
-            }
-        })
-        
+        if address.characters.count != 0 {
+            geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
+                if((error) != nil){
+                    print("Error", error)
+                }
+                if let placemark = placemarks?.first {
+                    let location = placemark.location
+                    self.mainViewController!.getNewLocation(location!)
+                }
+            })
+        }        
     }
     
     func setUpView() {
@@ -54,11 +55,11 @@ class SettingsViewController: UIViewController {
         let topFifthCenterY = (screen.height / 5)
     
         enterLocationLabel = UILabel(frame: CGRectMake(screen.width / 15, topFifthCenterY, 200, 20))
-        enterLocationLabel.text = "Enter Location"
+        enterLocationLabel.text = "Custom Location"
         self.view.addSubview(enterLocationLabel)
         
         locationTextField = UITextField(frame: CGRectMake(screen.width / 15, (1.2*topFifthCenterY), 300, 40))
-        locationTextField.placeholder = "Enter text here"
+        locationTextField.placeholder = "Enter location here"
         locationTextField.font = UIFont.systemFontOfSize(15)
         locationTextField.borderStyle = UITextBorderStyle.RoundedRect
         locationTextField.autocorrectionType = UITextAutocorrectionType.No
@@ -66,51 +67,42 @@ class SettingsViewController: UIViewController {
         locationTextField.returnKeyType = UIReturnKeyType.Done
         locationTextField.clearButtonMode = UITextFieldViewMode.WhileEditing;
         locationTextField.contentVerticalAlignment = UIControlContentVerticalAlignment.Center
+        locationTextField.delegate = self
         self.view.addSubview(locationTextField)
         
-        sortSwitch = UISwitch(frame: CGRect(x: screen.width / 2, y: screen.height / 2, width: 0, height: 0))
-        sortSwitch.on = true
-        sortSwitch.setOn(true, animated: false);
-        sortSwitch.addTarget(self, action: #selector(SettingsViewController.switchValueDidChange(_:)), forControlEvents: .ValueChanged)
+        searchButton = UIButton(frame: CGRectMake(screen.width / 15, (1.2 * topFifthCenterY) + 60, 100, 30))
+        searchButton.setTitleColor(self.view.tintColor, forState: UIControlState.Normal)
+        searchButton.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        searchButton.setTitle("Search", forState: UIControlState.Normal)
+        searchButton.addTarget(self, action: "searchPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(searchButton)
+        
+        sortSwitch = UISwitch(frame: CGRectMake(screen.width - 70, screen.height / 2 - 30, 0, 0))
+        sortSwitch.on = (self.mainViewController?.user.sortByDistance!)!
+        sortSwitch.addTarget(self, action: "switchValueDidChange:", forControlEvents: .ValueChanged)
         self.view.addSubview(sortSwitch)
         
-        bestMatchLabel = UILabel(frame: CGRectMake(screen.width / 6, (screen.height / 2) - 10, 200, 40))
-        bestMatchLabel.text = "Location"
-        bestMatchLabel.font = bestMatchLabel.font.fontWithSize(30)
-        
-        self.view.addSubview(bestMatchLabel)
-        
-        locationLabel = UILabel(frame: CGRectMake(2 * screen.width / 3, (screen.height / 2) - 10, 200, 40))
-        locationLabel.text = "Best Match"
-        locationLabel.font = locationLabel.font.fontWithSize(30)
+        locationLabel = UILabel(frame: CGRectMake(20, (screen.height / 2) - 40, 200, 40))
+        locationLabel.text = "Sort by Distance"
+        locationLabel.font = locationLabel.font.fontWithSize(screen.width / 20)
         self.view.addSubview(locationLabel)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     func switchValueDidChange(sender:UISwitch!)
     {
         if (sender.on == true){
-            print("on")
-        }
-        else{
-            print("off")
+            self.mainViewController!.user.sortByDistance = true
+        } else{
+            self.mainViewController!.user.sortByDistance = false
         }
     }
     
-    
-
-    
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func searchPressed() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
-    */
-
 }
